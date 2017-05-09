@@ -1,0 +1,116 @@
+---
+layout: default
+permalink: signup2
+
+title: Restaurant Employee Scheduling Software | Zip Schedules
+description: Scheduling software made for restaurants. Control your labor costs, communicate with staff and keep everyone in-the-loop with a free mobile apps.
+
+### Hero background image and headline text at the top of the page
+hero_img_bg: chef_cut.jpeg
+features_hero_headline: Sign up for a free 14-day trial
+features_hero_caption1: Create your first schedule in minutes.
+
+### Form and Testimonials Block
+#Form data
+form_headline: 14-day free trial. No credit card required.
+#Coupon input will be available if "coupon_input" has any value
+coupon_input: true
+form_btn_text: Sign Up
+---
+<!--### Hero Block Start-->
+<div class="hero" style="background-image: url({{ site.baseurl }}/assets/images/{{ page.hero_img_bg }})">
+	<div class="padding-wrap-lg-both tint text-center">
+		<div class="container">
+			<h1>{{ page.features_hero_headline }}</h1>
+		</div>
+	</div>
+</div>
+<!--### Hero Block End-->
+
+<!--Subheader headlines Start-->
+<div class="container-fluid">
+	<div class="padding-wrap-sm text-center">
+		<div class="container">
+			<h2 class="text-light">{{ page.features_hero_caption1 }}</h2>
+		</div>
+	</div>
+</div>
+<!--Subheader headlines End-->
+
+
+<!--Form and Testimonials Block Start-->
+<div class="container padding-wrap-md">
+	<div class="row">
+		<!--	FAQ Block Start-->
+		<div class="col-lg-6 col-sm-6">
+			<h3 class="text-center">{{ page.form_headline }}</h3>
+			<div class="form-wrap-dark">
+				<form>
+					<div class="form-group">
+						<label for="client_name">Full name</label>
+						<input type="text" class="form-control" id="client_name" placeholder="John Smith">
+					</div>
+					<div class="form-group">
+						<label for="client_company">Company name</label>
+						<input type="text" class="form-control" id="client_company" placeholder="RoadHouse Bar & Grill">
+					</div>
+					<div class="form-group">
+						<label for="client_email">Email</label>
+						<input type="email" class="form-control" id="client_email" placeholder="Email">
+					</div>
+					<div class="form-group">
+						<label for="client_phone">Phone</label>
+						<input type="tel" class="form-control" id="client_phone" placeholder="(XXX) XXX-XXXX">
+					</div>
+					<div class="form-group">
+						<label for="exampleInputPassword1">Password</label>
+						<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+					</div>
+					{% if page.coupon_input %}
+					<div class="form-group">
+						<span class="">Have a coupon?</span>
+						<label class="coupon-toggle" for="coupon_check">Yes, I do.</label>
+						<input type="checkbox" id="coupon_check">
+						<input type="text" class="form-control" placeholder="Enter coupon code" id="signup_coupon" name="signup_coupon" value="">
+					</div>
+					{% endif %}
+					<button type="submit" class="btn btn-warning">{{ page.form_btn_text}}</button>
+				</form>
+			</div>
+		</div>
+		<!--	FAQ Block End-->
+		<!--	Testimonials Block Start-->
+		<div class="col-lg-5 col-lg-offset-1 col-sm-6">
+			{% for item in site.data.testimonials.testimonials limit: 2 %}
+
+			<div class="media padding-wrap-sm">
+				<div class="media-left">
+					<a href="#">
+						<img src='{{ site.baseurl }}/assets/images/{{item.person_photo}}' height="150px" width="150px" class="img-circle">
+					</a>
+				</div>
+				<div class="media-body">
+					<div class="clearfix panel">
+						<div class="pull-left caption">
+							<h4 class="text-reg">{{ item.person_name }}</h4>
+							<h5 class="text-reg">{{ item.biz_name }}
+								<br>
+							{{ item.biz_location }}
+							</h5>
+						</div>
+						<div class="pull-right">
+							<img src='{{ site.baseurl }}/assets/images/{{item.biz_logo}}' height="55px" class="center-block">
+						</div>
+					</div>
+					<div class="quote">
+						<p class="text-reg">"{{ item.person_quote }}"</p>
+					</div>
+				</div>
+			</div>
+
+			{% endfor %}
+		</div>
+		<!--	Testimonials Block End-->
+	</div>
+</div>
+<!--Form and Testimonials Block End-->

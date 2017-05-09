@@ -1,0 +1,39 @@
+<!--Add the code below to page's front-matter-->
+
+<!--
+### Videos Links Block
+video_link: https://embedwistia-a.akamaihd.net/deliveries/74d4ee28d7df9e6807317cdd1e48758dca27be8f/file.mp4
+video_poster: /img/cafe.jpeg
+#add proper variable to testimonials for each biz/company "video_link" & "video_poster"
+
+video_headline: So easy, no wonder it’s #1
+video_par_1: 60% of the top restaurant chains in the world run Altametrics Back Office.
+video_par_2: See how thousands of restaurant managers are saving up to 5% in food costs and up to 3% in labor costs. 
+-->
+
+<div class="padding-wrap-lg highlight bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7">
+				<div>
+					<div class="embed-responsive embed-responsive-16by9">
+					{% for item in site.data.testimonials.testimonials limit: 1 %}
+						<video class="embed-responsive-item" src="{{ site.baseurl }}/assets/video/{{ item.video_link }}" preload="none" controls poster="{{ site.baseurl}}/assets/video/{{ item.video_poster }}">
+							<source src="{{ page.video_link }}" type="video/mp4">
+						</video>
+					{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<h3 class="text-reg"><i>{{ page.video_headline }}</i></h3>
+				<p class="quote padding-wrap-xs">
+					{{ page.video_par_1 }}
+				</p>
+				<p class="quote padding-wrap-xs">
+					{{ page.video_par_2 }}
+				</p>
+			</div>
+		</div>
+	</div>
+</div>

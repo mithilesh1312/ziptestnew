@@ -1,0 +1,21 @@
+<div id="call-to-action-wrap" class="hero cta-video">
+	
+	<div class="padding-wrap-xl-both tint text-center">
+		<div class="container text-center">
+			<p class="lead">{{ site.cta_headline }}</p>
+			<form class="form-inline" method="post">
+				<div class="form-group">
+					<input type="text" class="form-control" id="" placeholder="Full Name" name="signup_full_name">
+				</div>
+				<div class="form-group">
+					<input type="email" class="form-control" id="" placeholder="Email address" name="signup_email">
+				</div>
+				<button type="submit" class="btn btn-warning" name="signup_home_create_account">{{ site.cta_btn_signup }}</button>
+			</form>
+		</div>
+	</div>
+		<video class="calltoaction" poster="{{ site.baseurl }}/assets/video/{{ site.cta_video_poster }}" autoplay="true" loop>
+			<source src="{{ site.baseurl }}/assets/video/{{ site.cta_video_mp4 }}" type="video/mp4">
+			<source src="{{ site.baseurl }}/assets/video/{{ site.cta_video_webm }}" type="video/webm">
+		</video>
+</div>

@@ -1,0 +1,306 @@
+---
+layout: default
+permalink: pricing
+
+title: Easy Restaurant Scheduling Software. Try it Free. | Zip Schedules
+description: Scheduling software made for restaurants. Control your labor costs, communicate with staff and keep everyone in-the-loop with a free mobile apps.
+
+# Hero background image and headline text at the top of the page
+hero_img_bg: cta_bg.jpg
+hero_headline: Pricing
+hero_subheadline: Free time & attendance. Unlimited employees. No contracts.
+
+# Pricing
+pricing_headline: For a few dollars a month, you can save time and say goodbye to your scheduling headaches.
+price_highlight_text: Most popular
+
+# There are 3 columns with pricing plan/level details and features. A box with "price_highlight: true" is highlighted with box shadow.
+# You can add or remove feature line items as follows:
+# Use "active" class to make feature appear with green check icon. 
+# Use "strike" class to hide the green check and make it strikethrough
+
+price_plans:
+  - price_plan: Starter
+    price_highlight: false
+    price_monthly: $24.99/m
+    price_model: per location
+    price_qualifier: if billed annually or $27.50/m
+    features_group1: Features
+    features:
+      - name: Unlimited Employees
+        class: active
+      - name: Scheduling & notifications
+        class: active
+      - name: Availability requests
+        class: active
+      - name: Free mobile apps
+        class: active
+      - name: "Time Clocking: Compliance"
+        class: active
+      - name: "Reporting: Advanced"
+        class: active
+      - name: Overtime warnings
+        class: active
+      - name: Multi-location support
+        class: active
+      - name: Shift trading
+        class: active
+      - name: Communication tools
+        class: active
+      - name: Manager log book
+        class: strike
+      - name: Auto-scheduling/templates
+        class: strike
+      - name: Labor tool & projections
+        class: strike
+      - name: Events management
+        class: strike
+      - name: Weather forecasting
+        class: strike
+      - name: Shift reminders
+        class: strike
+      - name: Activity log
+        class: strike
+      - name: Asst. manager role
+        class: strike
+      - name: Stations
+        class: strike
+    features_group2: Support
+    name: Free support included.
+    class: active
+      
+  - price_plan: Professional
+    price_highlight: true
+    price_monthly: $39.99/m
+    price_model: per location
+    price_qualifier: if billed annually or $43.99/m
+    features_group1: Features
+    features:
+      - name: Unlimited Employees
+        class: active
+      - name: Scheduling & notifications
+        class: active
+      - name: Availability requests
+        class: active
+      - name: Free mobile apps
+        class: active
+      - name: "Time Clocking: Compliance"
+        class: active
+      - name: "Reporting: Advanced"
+        class: active
+      - name: Overtime warnings
+        class: active
+      - name: Multi-location support
+        class: active
+      - name: Shift trading
+        class: active
+      - name: Communication tools
+        class: active
+      - name: Manager log book
+        class: active
+      - name: Auto-scheduling/templates
+        class: active
+      - name: Labor tool & projections
+        class: active
+      - name: Events management
+        class: active
+      - name: Weather forecasting
+        class: strike
+      - name: Shift reminders
+        class: strike
+      - name: Activity log
+        class: strike
+      - name: Asst. manager role
+        class: strike
+      - name: Stations
+        class: strike
+    features_group2: Support
+    name: Free support included.
+    class: active
+
+  - price_plan: Enterprise
+    price_highlight: false
+    price_monthly: $69.99/m
+    price_model: per location
+    price_qualifier: if billed annually or $76.99/m
+    features_group1: Features
+    features:
+      - name: Unlimited Employees
+        class: active
+      - name: Scheduling & notifications
+        class: active
+      - name: Availability requests
+        class: active
+      - name: Free mobile apps
+        class: active
+      - name: "Time Clocking: Compliance"
+        class: active
+      - name: "Reporting: Advanced"
+        class: active
+      - name: Overtime warnings
+        class: active
+      - name: Multi-location support
+        class: active
+      - name: Shift trading
+        class: active
+      - name: Communication tools
+        class: active
+      - name: Manager log book
+        class: active
+      - name: Auto-scheduling/templates
+        class: active
+      - name: Labor tool & projections
+        class: active
+      - name: Events management
+        class: active
+      - name: Weather forecasting
+        class: active
+      - name: Shift reminders
+        class: active
+      - name: Activity log
+        class: active
+      - name: Asst. manager role
+        class: active
+      - name: Stations
+        class: active
+    features_group2: Support
+    name: Free support included.
+    class: active
+   
+# Form Box Block 
+form_headline: More than 10 locations? Contact us for chain & franchise pricing.
+form_button: Start My Free Trial
+form_note: No credit card required.
+
+# Other Includes
+testimonials-1_show: true
+webinar_show: true
+appmarket_show: false
+
+---
+<!--### Hero Block Start-->
+<div class="hero" style="background-image: url({{ site.baseurl }}/assets/images/{{ page.hero_img_bg }})">
+	<div class="padding-wrap-lg-both tint text-center">
+		<div class="container">
+			<h1>{{ page.hero_headline }}</h1>
+		</div>
+	</div>
+</div>
+<!--### Hero Block End-->
+
+<!--Subheader headlines Start-->
+<div class="container-fluid">
+	<div class="padding-wrap-sm text-center">
+		<div class="container">
+			<h2 class="text-light">{{ page.hero_subheadline }}</h2>
+		</div>
+	</div>
+</div>
+<!--Subheader headlines End-->
+
+<!--Lead paragraph Start-->
+<div id="pricing" class="padding-wrap-sm">
+	<div class="text-center">
+		<p class="lead text-light">{{ page.pricing_headline }}</p>
+	</div>
+</div>
+<!--Lead paragraph End-->
+
+<!--Price boxes Start-->
+<div class="price-brackets clearfix">
+	<div class="price-bracket-most-popular">
+		{{ page.price_highlight_text }}
+	</div>
+ {% for item in page.price_plans %}	
+	<div class="price-bracket {% if item.price_highlight %}price-bracket-popular{% endif %}">
+		<div class="price-bracket-heading">
+			<h3 class="text-uppercase text-light">{{ item.price_plan }}</h3>
+			<h4 class="text-light">
+    {{ item.price_monthly }} <em>{{ item.price_model }}</em> <span>{{ item.price_qualifier }}</span>
+   </h4>
+			<a href="{{ site.baseurl }}/signup" class="btn btn-warning">Start My Free Trial</a>
+		</div>
+		<div class="price-bracket-feat">
+			<h5 class="text-light text-uppercase text-center padding-wrap-xs">{{ item.features_group1 }}</h5>
+			<ul class="list-unstyled">
+			{% for feature in item.features %}
+				<li class="{{ feature.class }}"><span>✓</span>&nbsp; {{ feature.name }}</li>
+			{% endfor %}
+			</ul>
+
+			<h5 class="text-light text-uppercase text-center padding-wrap-xs">{{ item.features_group2 }}</h5>
+			<ul class="list-unstyled">
+				<li class="price-bracket-support {{ item.class }}"><span>✓</span>&nbsp; {{ item.name }}</li>
+			</ul>
+		</div>
+	</div>
+{% endfor %}
+</div>
+<!--Price boxes End-->
+
+<!--Form Box Start-->
+<div class="row text-center padding-wrap-xs">
+	<h3 class="text-reg">{{ page.form_headline }}<span class="arrow-right-down"></span></h3>
+</div>
+<div class="padding-wrap-sm">
+	<div class="container text-center">
+		<form class="form-inline" method="post">
+			<div class="form-group">
+				<input type="text" class="form-control" id="" placeholder="Full Name" name="signup_full_name">
+			</div>
+			<div class="form-group">
+				<input type="email" class="form-control" id="" placeholder="Email address" name="signup_email">
+			</div>
+			<button type="submit" class="btn btn-warning" name="signup_home_create_account">{{ page.form_button }}</button>
+		</form>
+	</div>
+	<p class="text-center text-light padding-wrap-sm">{{ page.form_note }}</p>
+</div>
+<!--Form Box End-->
+
+<!--FAQ and Testimonials Block Start-->
+<div class="container padding-wrap-md">
+	<div class="row">
+		<!--	FAQ Block Start-->
+		<div class="col-md-6">
+			<h3 class="text-light">{{ site.data.faq.faq_headline}}</h3> {% for item in site.data.faq.faqs %}
+			<section class="padding-wrap-xs">
+				<h4 class="text-reg">{{ item.q }}</h4>
+				<p class="text-light quote">{{ item.a }}</p>
+			</section>
+			{% endfor %}
+		</div>
+		<!--	FAQ Block End-->
+		<!--	Testimonials Block Start-->
+		<div class="col-md-5 col-md-offset-1 padding-wrap-lg">
+			{% for item in site.data.testimonials.testimonials limit: 2 offset: 1 %}
+
+			<div class="media padding-wrap-sm">
+				<div class="media-left">
+					<a href="#">
+						<img src='{{ site.baseurl }}/assets/images/{{item.person_photo}}' height="150px" width="150px" class="img-circle">
+					</a>
+				</div>
+				<div class="media-body">
+					<div class="clearfix panel">
+						<div class="pull-left caption">
+							<h4 class="text-reg">{{ item.person_name }}</h4>
+							<h5 class="text-reg">{{ item.biz_name }}
+								<br>
+							{{ item.biz_location }}
+							</h5>
+						</div>
+						<div class="pull-right">
+							<img src='{{ site.baseurl }}/assets/images/{{item.biz_logo}}' height="55px" class="center-block">
+						</div>
+					</div>
+					<div class="quote">
+						<p class="text-reg">"{{ item.person_quote }}"</p>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<!-- Testimonials Block End-->
+	</div>
+</div>

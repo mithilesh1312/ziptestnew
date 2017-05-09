@@ -1,0 +1,127 @@
+# add video_link and video_poster for each testimonial that has a video available.
+
+testimonials:                                                                              
+  - biz_name: Fresh Griller                                                                
+    biz_location: Fullerton, CA                                                             
+    biz_link: freshgriller.com
+    biz_logo: restaurant-employee-scheduling-logo-freshgriller.png                         
+    person_name: John Evard                                                                
+    person_photo: restaurant-employee-scheduling-photo-freshgriller.png                     
+    person_quote: I was so impressed when I first saw Zip Schedules that I couldn’t wait to start using it. I’ve never seen a employee scheduling software that is so easy to use and understand.
+    video_link: cucumber.mp4
+    video_poster: cafe.jpeg
+    cstudy_link: labeling.pdf
+  - biz_name: Famous Dave's
+    biz_location: Costa Mesa, CA
+    biz_link: freshgriller.com
+    biz_logo: restaurant-employee-scheduling-logo-famousdaves.png
+    person_name: David Markwell
+    person_photo: restaurant-employee-scheduling-photo-famousdaves.png
+    person_quote: Zip Schedules has totally eliminated the need for post-it notes laying all over my desk with time-off requests. It also helps us track hours/employees without having to use a calculator or set-up a formula in Excel. It’s the best $19/mo. this company spends!
+    video_link: cucumber.mp4
+    video_poster: cafe.jpeg
+    cstudy_link: labeling.pdf
+  - biz_name: Roy's
+    biz_location: Dallas, TX
+    biz_link: freshgriller.com
+    biz_logo: restaurant-employee-scheduling-logo-famousdaves.png
+    person_name: Emily Lee
+    person_photo: restaurant-employee-scheduling-photo-freshgriller.png
+    person_quote: It has a great labor cost control and communication tool. It allows us to find replacements and react to unexpected changes with immediate updates to our employees.
+    video_link: cucumber.mp4
+    video_poster: cafe.jpeg
+    cstudy_link: labeling.pdf
+  - biz_name: Famous Dave's
+    biz_location: Costa Mesa, CA
+    biz_link: freshgriller.com
+    biz_logo: restaurant-employee-scheduling-logo-famousdaves.png
+    person_name: David Markwell
+    person_photo: restaurant-employee-scheduling-photo-famousdaves.png
+    person_quote: Zip Schedules has totally eliminated the need for post-it notes laying all over my desk with time-off requests. It also helps us track hours/employees without having to use a calculator or set-up a formula in Excel. It’s the best $19/mo. this company spends!
+    video_link: cucumber.mp4
+    video_poster: cafe.jpeg
+    cstudy_link: labeling.pdf
+  - biz_name: Moo Yah                                                                
+    biz_location: Fullerton, CA                                                             
+    biz_link: freshgriller.com
+    biz_logo: restaurant-employee-scheduling-logo-freshgriller.png                         
+    person_name: Bob Wooley                                                                
+    person_photo: restaurant-employee-scheduling-photo-freshgriller.png                     
+    person_quote: I was so impressed when I first saw Zip Schedules that I couldn’t wait to start using it. I’ve never seen a employee scheduling software that is so easy to use and understand.
+    video_link: cucumber.mp4
+    video_poster: cafe.jpeg
+    cstudy_link: labeling.pdf
+  - biz_name: Chicken Lickin Good
+    biz_location: Costa Mesa, CA
+    biz_link: freshgriller.com
+    biz_logo: restaurant-employee-scheduling-logo-famousdaves.png
+    person_name: Coln. Chicken
+    person_photo: restaurant-employee-scheduling-photo-famousdaves.png
+    person_quote: Zip Schedules has totally eliminated the need for post-it notes laying all over my desk with time-off requests. It also helps us track hours/employees without having to use a calculator or set-up a formula in Excel. It’s the best $19/mo. this company spends!
+    video_link: cucumber.mp4
+    video_poster: cafe.jpeg
+    cstudy_link: labeling.pdf
+  - biz_name: Fresh Griller                                                                
+    biz_location: Fullerton, CA                                                             
+    biz_link: freshgriller.com
+    biz_logo: restaurant-employee-scheduling-logo-freshgriller.png                         
+    person_name: John Evard                                                                
+    person_photo: restaurant-employee-scheduling-photo-freshgriller.png                     
+    person_quote: I was so impressed when I first saw Zip Schedules that I couldn’t wait to start using it. I’ve never seen a employee scheduling software that is so easy to use and understand.
+    video_link: cucumber.mp4
+    video_poster: cafe.jpeg
+    cstudy_link: labeling.pdf
+  - biz_name: Famous Dave's
+    biz_location: Costa Mesa, CA
+    biz_link: freshgriller.com
+    biz_logo: restaurant-employee-scheduling-logo-famousdaves.png
+    person_name: David Markwell
+    person_photo: restaurant-employee-scheduling-photo-famousdaves.png
+    person_quote: Zip Schedules has totally eliminated the need for post-it notes laying all over my desk with time-off requests. It also helps us track hours/employees without having to use a calculator or set-up a formula in Excel. It’s the best $19/mo. this company spends!
+    video_link: cucumber.mp4
+    video_poster: cafe.jpeg
+    cstudy_link: labeling.pdf
+  - biz_name: Roy's
+    biz_location: Dallas, TX
+    biz_link: freshgriller.com
+    biz_logo: restaurant-employee-scheduling-logo-famousdaves.png
+    person_name: Emily Lee
+    person_photo: restaurant-employee-scheduling-photo-freshgriller.png
+    person_quote: It has a great labor cost control and communication tool. It allows us to find replacements and react to unexpected changes with immediate updates to our employees.
+    video_link: cucumber.mp4
+    video_poster: cafe.jpeg
+    cstudy_link: labeling.pdf
+  - biz_name: Famous Dave's
+    biz_location: Costa Mesa, CA
+    biz_link: freshgriller.com
+    biz_logo: restaurant-employee-scheduling-logo-famousdaves.png
+    person_name: David Markwell
+    person_photo: restaurant-employee-scheduling-photo-famousdaves.png
+    person_quote: Zip Schedules has totally eliminated the need for post-it notes laying all over my desk with time-off requests. It also helps us track hours/employees without having to use a calculator or set-up a formula in Excel. It’s the best $19/mo. this company spends!
+    video_link: cucumber.mp4
+    video_poster: cafe.jpeg
+    cstudy_link: labeling.pdf
+  - biz_name: Moo Yah                                                                
+    biz_location: Fullerton, CA                                                             
+    biz_link: freshgriller.com
+    biz_logo: restaurant-employee-scheduling-logo-freshgriller.png                         
+    person_name: Bob Wooley                                                                
+    person_photo: restaurant-employee-scheduling-photo-freshgriller.png                     
+    person_quote: I was so impressed when I first saw Zip Schedules that I couldn’t wait to start using it. I’ve never seen a employee scheduling software that is so easy to use and understand.
+    video_link: cucumber.mp4
+    video_poster: cafe.jpeg
+    cstudy_link: labeling.pdf
+  - biz_name: Chicken Lickin Good
+    biz_location: Costa Mesa, CA
+    biz_link: freshgriller.com
+    biz_logo: restaurant-employee-scheduling-logo-famousdaves.png
+    person_name: Coln. Chicken
+    person_photo: restaurant-employee-scheduling-photo-famousdaves.png
+    person_quote: Zip Schedules has totally eliminated the need for post-it notes laying all over my desk with time-off requests. It also helps us track hours/employees without having to use a calculator or set-up a formula in Excel. It’s the best $19/mo. this company spends!
+    video_link: cucumber.mp4
+    video_poster: cafe.jpeg
+    cstudy_link: labeling.pdf
+
+testimonials_btn_show_cutomers: true
+testimonials_btn_show_cutomers_text: View more happy customers
+testimonials_show_customers_URL: /customers

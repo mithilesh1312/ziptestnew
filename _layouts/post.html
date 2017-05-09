@@ -1,0 +1,81 @@
+---
+layout: default
+---
+
+<!--### Hero Block End-->
+{% if page.hero_img_bg %}
+<div class="hero" style="background-image: url({{ site.baseurl }}/assets/images/{{ page.hero_img_bg }})">
+	<div class="padding-wrap-lg-both tint text-center">
+		<div class="container">
+			<h1 class="text-bold">{{ page.title }}</h1>
+		</div>
+	</div>
+</div>
+{% endif %}
+<!--### Hero Block End-->
+
+<!--Post Content Start-->
+<div class="padding-wrap-md">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9">
+				<section class="blog-listing">
+					<div class="thumbnail">
+						{% if page.image %}
+						<img src="{{ site.baseurl }}/assets/images/{{ page.image }}" alt="{{ post.title }}"> {% endif %}
+						<div class="caption">
+							<p class="info text-uppercase">
+								{{ page.date | date: '%B %d, %Y' }} / By <span>
+								{% if page.author %}
+									{{ page.author }}
+								{% elsif site.author %}
+									{{ site.author }}
+								{% endif %}
+								</span> / In <span>{{ site.title }}</span> / <span>Comments</span>
+							</p>
+							<h3 class="text-uppercase text-bold">{{ page.title }}</h3> {% if page.subtitle %}
+							<h3>{{ page.subtitle }}</h3> {% endif %}
+						</div>
+						<div class="caption">
+							{{ content }}
+						</div>
+					</div>
+				</section>
+				<hr>
+
+			<section>
+				<ul class="pager">
+					<a href="{{ site.baseurl }}/{{ site.data.navigation.nav_blog_url }}" class="btn btn-link btn-sm">Back To All Blog Articles</a>
+					{% if page.previous.url %}
+					<li class="previous">
+						<a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}"><i class="fa fa-arrow-left" aria-hidden="true"></i> Previous </a>
+					</li>
+					{% endif %} {% if page.next.url %}
+					<li class="next">
+						<a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+					</li>
+					{% endif %}
+				</ul>
+			</section>
+			<hr>
+			</div>
+			<!--Side bar Start-->
+			<div class="col-md-2 col-md-offset-1">
+				<section class="blog-shortcut">
+					<h3 class="text-reg">Recent posts</h3>
+					{% for post in site.posts limit: 5 %}
+						<ul class="list-unstyled">
+						<li>
+						<a href="{{ post.url}}">{{ post.title }}</a>
+						</li>
+						</ul>
+					{% endfor %}
+				</section>
+			</div>
+			<!--Side bar End-->
+		</div>
+	</div>
+</div>
+<!--Post Content End-->
+
+

@@ -1,0 +1,111 @@
+.price-brackets
+  margin: 30px auto 40px auto
+  border-radius: 4px
+  position: relative
+  
+  @include phone
+    width: 250px
+    
+  @include tablet
+    width: 752px
+    border: 1px solid #e5e5e5
+
+.price-bracket-most-popular
+  position: absolute
+  top: -17px
+  width: 252px
+  border: 1px solid #D5D5D5
+  left: 249px
+  background: #fff
+  text-align: center
+  border-top-left-radius: 4px
+  border-top-right-radius: 4px
+  text-transform: uppercase
+  font-family: $mont-light
+  padding: 5px 0
+  z-index: 2
+  
+  @include phone
+    display: none
+    
+  @include tablet
+    display: block
+
+.price-bracket-support
+  padding-left: 15px
+  margin-bottom: 15px
+  font-family: $roboto-light
+
+.price-bracket
+  width: 250px
+  
+  @include phone
+    margin: 0 auto
+    float: none
+    margin-bottom: 30px
+    border: 1px solid #e5e5e5
+    
+  @include tablet
+    float: left
+    margin-bottom: 0
+    border: 1px solid transparent
+  
+  &.price-bracket-popular
+    box-shadow: 0 0 30px rgba(0,0,0,0.25)
+    position: relative
+    z-index: 1
+    
+  ul
+    padding: 0 15px
+      
+    li
+      padding: 6px 0
+      border-bottom: 1px solid #e5e5e5
+      position: relative
+      font-family: $roboto-light
+
+      &.strike
+        text-decoration: line-through
+        color: #999
+        font-weight: 300
+
+        span
+          display: none
+
+      &.active
+
+        span
+          display: inline
+
+  h5.text-light
+    margin-bottom: 0  
+        
+  span
+    color: #47a447
+    font-weight: bold
+
+  .price-bracket-heading
+    padding: 20px
+    background: #f9fafa
+    text-align: center
+    border-bottom: 1px solid #e5e5e5
+    min-height: 170px
+
+    h3
+      color: #999
+      margin-top: 15px
+
+    h4
+      font-size: 2em
+      margin-top: 0
+      margin-bottom: 25px
+      font-weight: bold
+
+      em, 
+      span
+        color: #999
+        font-size: 14px
+        display: block  
+        
+      em
+        margin-bottom: 20px

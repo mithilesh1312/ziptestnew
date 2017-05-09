@@ -1,0 +1,163 @@
+# Restart "bundle exec jekyll serve" for any changes to take effect.
+
+# the target primary SEO keywords / keyphrase (i.e. KWs) for this page are: "Restaurant Employee Scheduling"
+
+#-------------------------------#
+# Environment Settings          #
+#-------------------------------#
+permalink: pretty
+markdown: kramdown
+livereload: true
+
+gems: 
+  - jekyll-feed
+  - jekyll-seo-tag                                          # Jekyll plugin to add metadata tags for search engines and social networks to better index and display your site's content.
+  - jekyll-sitemap                                          # Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site
+  - octopress-paginate
+
+exclude:                                                    # These files are excluded from the site build, and will not be uploaded
+  - Gemfile
+  - Gemfile.lock
+  - less
+  - node_modules
+  - Gruntfile.js
+  - package.json
+  - README.md
+  - s3_website.yml                                          # s3_website config file, contains Amazon S3 credentials and must be excluded from the site build
+
+#---------------------------------------#
+#   Site Build and Deploy Settings      #
+#---------------------------------------#
+sass:
+    sass_dir: _sass
+#    style: compressed                                      # Used to minify css
+minify_html: false                                          # Set to "true" to minify HTML - The build will take a long time
+
+#------------------------------#
+#   Global Site Settings       #
+#------------------------------#
+baseurl: ""                                                          # the subpath of your site, e.g. /blog/
+url: ""                                                                                     # the base hostname & protocol for your site
+
+logo: logo.png                                                                              # URL to a site-wide logo (e.g., /img/key-phrase-logo.png)
+logo_title: Restaurant Scheduling Software                                                  # SEO: Use primary key phrase / key words
+logo_subtitle: Made for Restaurants                                                         # SEO: Use primary key phrase / key words
+
+#------------------------#
+# SEO SETTINGS           #
+#------------------------#
+# Default SEO settings - these settings are overridden if set at the page, post, or document level
+# Details here: https://github.com/jekyll/jekyll-seo-tag and here: https://developers.google.com/search/docs/guides/enhance-site#add-your-sites-name-logo-and-social-links
+title: Zip Schedules                                                                        # Your site's title (ex. Zip Schedules )
+description: Restaurant Employee Scheduling Software                                        # A short description
+mailing_address: 3191 Red Hill Ave. Costa Mesa CA 92626 USA
+author: Mitesh Gala                                                                         # Global author information
+
+twitter:                                                                                    # The site's Twitter handle.
+  username: zipschedules
+facebook:                                                                                   # Facebook settings
+ app_id:                                                                                    # a Facebook app ID for Facebook insights
+ publisher:                                                                                 # a Facebook page URL or ID of the publishing entity
+ admins:                                                                                    # a Facebook user ID for domain insights linked to a personal account
+social:
+  name: Hubworks
+  links:                                                                                    # Add the URL of each social media account here. 
+    - https://twitter.com/XXXXXXXXXXX                                                       # Ex. https://twitter.com/gala.mitesh  
+    - https://www.facebook.com/XXXXXXXXXXX                                                  # Ex. https://www.facebook.com/gala.mitesh
+    - https://www.linkedin.com/in/XXXXXXXXXXX                                               # Ex. https://www.linkedin.com/in/GalaMitesh
+    - https://plus.google.com/XXXXXXXXXXX                                                   # Ex. https://plus.google.com/+gala.mitesh
+webmaster_verifications:
+  google: UA-53077711-1
+  bing: 
+  alexa: 
+  yandex: 
+
+google_analytics_key: UA-53077711-1                                                         # To use Google Analytics enter the tracking id for this website. ex. UA-16478174-16
+chat_id: 06470201-3687-4cba-bae3-f71628d806f1                                               # Enter your snap engage chat id to activate website chat
+
+#--- Navigation ---#
+nav_top_show: true
+nav_main_show: true
+nav_snap_show: true                                                                          # Show the menu "snap" call to action when the menu is hidden (on scroll down)
+nav_submenu_show: # the nav sub bar settings are maintained at the page level
+
+#--- Navigation Snap ---#
+nav_cta_headline: See how easy it is.                                                       # Navigation "snap" headline 
+nav_cta_subheadline: You'll be scheduling staff in minutes.                                 # Navigation "snap" call to action subheadline
+nav_cta_subheadline2: Read what our customers say                                           # Navigation "snap" call to action subheadline 2
+nav_cta_subheadline2_URL: customers.html                                                    # Navigation "snap" call to action link
+nav_cta_btn_signup: Start My FREE Trial                                                     # Navigation "snap" call to action button label
+
+#--- Navigation Footer ---#
+# Footer values are maintained in _data\navigation.yml
+
+# --- Call To Action --- #
+cta_headline: Online employee shift planning has never been easier. <strong> Try it free for 30 days.</strong>
+cta_btn_signup: Start My FREE Trial
+# --- CallToAction_1 (background image) --- #
+cta_bg_show: true
+cta_bg: #cta_bg.jpg (specify background image name or comment out for no image.)
+# --- CallToAction_2 (background video) --- #
+cta_video_show: false
+cta_video_poster: cucumber.jpg
+cta_video_mp4: cucumber.mp4
+
+# --- Testimonials_1 --- #
+testimonial_1_img_bg: resto.jpeg
+
+# --- Webinar --- #
+webinar_icon: bg-webinar-icon.png
+webinar_headline: Become an online scheduling expert!
+webinar_subheadline: Our next webinar is this Wednesday @ 2:00 PM (EST)
+webinar_btn_text: Reserve Your Spot
+webinar_btn_link: restaurant-scheduling-webinar
+
+# --- Blog --- #
+pagination:                                                                                 # Determines how many articles are shown on a page
+  limit: false
+  per_page: 5
+  title_suffix: " (page :num)"
+permalink: "/blog/:name.html"                                                               # The URL of the blog article will be set to the title (pulled from the file name). Ex. zipschedules.com/this-is-my-blog.html
+
+# --- News --- #
+collections:
+  news:
+    output: true
+    layout: news
+    permalink: /top-news/:name.html
+
+# Set the "type" of each article in the _news folder to assign an article to one of the categories
+# "name" is displayed in the article filter on the news listing page
+news-listing-categories:
+  - type: team
+    name: Team Motivation
+  - type: labor
+    name: Labor Laws and Trends
+  - type: scheduling
+    name: Employee Scheduling
+  - type: business
+    name: Grow Your Business
+
+#---------------------------------------------------#
+# App Market Include (_includes/appmarket.html)     #
+#---------------------------------------------------#
+disc_headline: Discover Our Other Apps
+disc_subheadline: Because everyhing works better, when everything works together.
+disc_apps:
+  - app_name: Zip Forecasting
+    app_image: zipForecast-160x160.png
+    app_URL: zipforecasting.com
+  - app_name: Zip Clock
+    app_image: zipClock-160x160.png
+    app_URL: zipclock.com
+  - app_name: Zip POS Dashboard
+    app_image: zipPosDashboard-160x160.png
+    app_URL: zipposdashboard.com
+  - app_name: Zip Shift Book
+    app_image: zipShiftbook-160x160.png
+    app_URL: zipshiftbook.com
+  - app_name: Zip Ordering
+    app_image: zipOrdering-with-title.png
+    app_URL: zipordering.com
+disc_btn_show_appmarket: true
+disc_appmarket_URL: hubworks.com/app-market

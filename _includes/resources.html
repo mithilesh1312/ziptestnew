@@ -1,0 +1,65 @@
+<!-- Hero Block Start-->
+<div class="hero" style="background-image: url({{ site.baseurl }}/assets/images/{{ page.hero_img_bg }})">
+	<div class="padding-wrap-lg-both tint text-center">
+		<div class="container">
+			<h1>{{ page.resources_hero_headline }}</h1>
+		</div>
+	</div>
+</div>
+<!--### Hero Block End-->
+
+<!--Subheader headlines Start-->
+<div class="container-fluid">
+	<div class="padding-wrap-sm text-center">
+		<div class="container">
+			<h2 class="text-light">{{ page.resources_hero_caption }}</h2>
+		</div>
+	</div>
+</div>
+<!--Subheader headlines End-->
+
+<!-- Portfolio Start -->
+
+<section id="portfolio-work" class="padding-wrap-sm">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="portfolio-menu">
+					<ul class="nav nav-pills nav-justified tabs list-unstyled">
+						<li class="text-center"> 
+							<button class="btn btn-warning text-capitalize btn-sm" data-toggle="portfilter" data-target="all">	
+							Everything
+							</button>
+						</li>
+						
+						{% for entry in page.resource_types %}
+						<li class="text-center">
+							<button class="btn btn-primary text-capitalize btn-sm" data-toggle="portfilter" data-target="{{ entry.tag }}">
+							{{ entry.type }}
+							</button>
+						</li>
+						{% endfor %}
+						
+					</ul>
+				</div>
+				<div class="portfolio-content padding-wrap-sm">
+					<ul id="thumbnails" class="clearfix list-unstyled">
+						{% for item in page.resource_library %}
+						<li class="clearfix" data-tag='{{ item.tag }}'>
+							<a class="thumbnail" href="{{ item.link }}"target="_blank">
+								<img src="{{ site.baseurl }}/assets/resources/{{ item.image }}" alt="{{ item.altimage }}">
+								<div class="caption">
+									<div class="position-center text-center">
+										<h2 class="text-light">{{ item.title }}</h2>
+										<p class="text-light"> {{ item.desc }} </p>
+									</div>
+								</div>
+							</a>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,43 @@
+
+.form-wrap-dark
+	background:
+		color: $text-title
+	
+	@include phone
+		padding: 20px
+	
+	@include tablet-ls
+		padding: 20px 60px
+	
+	@include desktop
+		padding: 20px 80px 20px 20px
+	
+	.btn-warning
+		margin: 0
+	
+	.form-group
+		margin-top: 10px
+		margin-bottom: 25px
+		
+		span
+			color: #fff
+	
+	label
+		color: #fff
+		font-weight: 300
+		cursor: pointer
+	
+		&.coupon-toggle
+			text-decoration: underline
+			color: $feature-color
+
+input#coupon_check
+	display: none
+
+	~#signup_coupon
+		display: none
+	
+	&:checked
+		~#signup_coupon
+			display: block
+	

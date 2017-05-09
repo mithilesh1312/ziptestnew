@@ -1,0 +1,22 @@
+<!--# Testimonials-1 Block Start-->
+<div class="feat-restaurant hero" style="background-image: url({{ site.baseurl }}/assets/images/{{ site.testimonial_1_img_bg }})">
+	<div class="padding-wrap-lg-both tint">
+		<div class="container">
+			<div class="col-lg-6 col-lg-offset-3">
+				{% for item in site.data.testimonials.testimonials limit: 1 %}
+				<div class="thumbnail">
+					<img src="{{ site.baseurl}}/assets/images/{{ item.biz_logo }}" class="center-block img-circle">
+					<div class="caption text-center">
+						<blockquote>
+							"{{ item.person_quote }}"
+						</blockquote>
+						<h4>{{ item.person_name }}</h4>
+						<p>{{ item.biz_name }}, {{ item.biz_location }}</p>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+<!--# Testimonials-1 Block End-->

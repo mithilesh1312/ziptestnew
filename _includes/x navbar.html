@@ -1,0 +1,25 @@
+<!--Navigation Sub Menu Start-->
+<div class="container-fluid border_bottom">
+	<div class="container" id="submenu">
+		<div class="padding-wrap-md">
+			<div class="row">
+				<div class="col-md-2">
+					<div class="padding-wrap-xs">
+						<span class="title">{{ page.navbar_title }}</span>
+					</div>
+				</div>
+				<div class="col-md-10 item-wrap">
+					{% for item in page.navbar_items %}
+					<div class="menu-item text-center">
+						<span class="img-item">
+							<a href="http://{{ item.link }}"><img class="center-block" src="{{ site.baseurl }}/assets/images/{{ item.img }}" alt="{{ item.name }}"></a>
+						</span>
+						<span class="text-item">{{ item.name }}</span>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--Navigation Sub Menu End-->

@@ -1,0 +1,77 @@
+# Integrations
+
+integrations:
+  - name: Peoplesoft
+    description: Peoplesoft is a leading ERP platform.
+    link: peoplesoft-employee-schedule-integration-zip schedules
+    logo: restaurant-employee-scheduling-logo-famousdaves.png
+    altimage: Peoplesoft Integration to Zip Schedules Employee Scheduling
+    tag: human_resources
+  - name: NCR Aloha
+    description: this is a description.
+    link: http://saml-doc.okta.com/SAML_Docs/How-to-Configure-SAML-2.0-for-Deputy.html
+    logo: restaurant-employee-scheduling-logo-freshgriller.png
+    tag: pos
+  - name: Micros
+    description: this is a description.
+    link: http://saml-doc.okta.com/SAML_Docs/How-to-Configure-SAML-2.0-for-Deputy.html
+    logo: restaurant-employee-scheduling-logo-freshgriller.png
+    tag: pos
+  - name: Zip Clock for Hubworks
+    description: this is a description.
+    link: http://saml-doc.okta.com/SAML_Docs/How-to-Configure-SAML-2.0-for-Deputy.html
+    logo: restaurant-employee-scheduling-logo-freshgriller.png
+    tag: time_clocks
+  - name: Zip Clock for Altametrics
+    description: this is a description.
+    link: http://saml-doc.okta.com/SAML_Docs/How-to-Configure-SAML-2.0-for-Deputy.html
+    logo: restaurant-employee-scheduling-logo-freshgriller.png
+    tag: time_clocks
+  - name: Zip Recruiter
+    description: Zip Recruiter integration to Zip Schedules Employee Scheduling
+    link: http://saml-doc.okta.com/SAML_Docs/How-to-Configure-SAML-2.0-for-Deputy.html
+    logo: restaurant-employee-scheduling-logo-freshgriller.png
+    altimage: Zip Recruiter integration to Zip Schedules Employee Scheduling
+    tag: hiring
+  - name: Any Connector
+    link: http://saml-doc.okta.com/SAML_Docs/How-to-Configure-SAML-2.0-for-Deputy.html
+    logo: restaurant-employee-scheduling-logo-freshgriller.png
+  - name: Any Connector
+    link: http://saml-doc.okta.com/SAML_Docs/How-to-Configure-SAML-2.0-for-Deputy.html
+    logo: restaurant-employee-scheduling-logo-freshgriller.png
+  - name: Any Connector
+    link: http://saml-doc.okta.com/SAML_Docs/How-to-Configure-SAML-2.0-for-Deputy.html
+    logo: restaurant-employee-scheduling-logo-freshgriller.png
+  - name: Any Connector
+    link: http://saml-doc.okta.com/SAML_Docs/How-to-Configure-SAML-2.0-for-Deputy.html
+    logo: restaurant-employee-scheduling-logo-freshgriller.png
+  - name: Any Connector
+    link: http://saml-doc.okta.com/SAML_Docs/How-to-Configure-SAML-2.0-for-Deputy.html
+    logo: restaurant-employee-scheduling-logo-freshgriller.png
+  - name: Any Connector
+    link: http://saml-doc.okta.com/SAML_Docs/How-to-Configure-SAML-2.0-for-Deputy.html
+    logo: restaurant-employee-scheduling-logo-freshgriller.png
+  - name: Any Connector
+    link: http://saml-doc.okta.com/SAML_Docs/How-to-Configure-SAML-2.0-for-Deputy.html
+    logo: restaurant-employee-scheduling-logo-freshgriller.png
+  - name: Any Connector
+    link: http://saml-doc.okta.com/SAML_Docs/How-to-Configure-SAML-2.0-for-Deputy.html
+    logo: restaurant-employee-scheduling-logo-freshgriller.png
+  - name: Any Connector
+    link: http://saml-doc.okta.com/SAML_Docs/How-to-Configure-SAML-2.0-for-Deputy.html
+    logo: restaurant-employee-scheduling-logo-freshgriller.png
+  - name: Any Connector
+    link: http://saml-doc.okta.com/SAML_Docs/How-to-Configure-SAML-2.0-for-Deputy.html
+    logo: restaurant-employee-scheduling-logo-freshgriller.png
+  - name: Neal's Connector
+    link: http://saml-doc.okta.com/SAML_Docs/How-to-Configure-SAML-2.0-for-Deputy.html
+    logo: restaurant-employee-scheduling-logo-famousdaves.png
+  - name: Neal's Connector
+    link: http://saml-doc.okta.com/SAML_Docs/How-to-Configure-SAML-2.0-for-Deputy.html
+    logo: restaurant-employee-scheduling-logo-famousdaves.png
+  - name: Neal's Connector
+    link: http://saml-doc.okta.com/SAML_Docs/How-to-Configure-SAML-2.0-for-Deputy.html
+    logo: restaurant-employee-scheduling-logo-famousdaves.png
+  - name: Neal's Connector
+    link: http://saml-doc.okta.com/SAML_Docs/How-to-Configure-SAML-2.0-for-Deputy.html
+    logo: restaurant-employee-scheduling-logo-famousdaves.png

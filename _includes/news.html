@@ -1,0 +1,73 @@
+<!-- News listing Start -->
+
+<section id="" class="padding-wrap-sm">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9">
+				<div class="portfolio-menu">
+					<ul class="nav nav-pills nav-justified tabs list-unstyled">
+						<li class="text-center"> 
+							<button class="btn btn-warning text-capitalize btn-sm" data-toggle="portfilter" data-target="all">	
+							All News
+							</button>
+						</li>
+						
+						{% for entry in site.news-listing-categories %}
+						<li class="text-center">
+							<button class="btn btn-primary text-capitalize btn-sm" data-toggle="portfilter" data-target="{{ entry.type }}">
+							{{ entry.name }}
+							</button>
+						</li>
+						{% endfor %}
+						
+					</ul>
+				</div>
+				<div class="blog-listing padding-wrap-sm">
+					<ul id="thumbnails" class="clearfix list-unstyled">
+						{% for item in site.news %}
+						<li class="clearfix" data-tag='{{ item.category }}'>
+							<div class="thumbnail">
+							{% if item.image %}
+								<img src="{{ site.baseurl }}/assets/images/{{ item.image }}" alt="{{ item.title }}">
+								{% endif %}
+								<div class="caption">
+								<p class="info text-uppercase">
+								{{ item.date | date: '%B %d, %Y' }} / By <span>
+								{% if item.author %}
+									{{ item.author }}
+								{% elsif site.author %}
+									{{ site.author }}
+								{% endif %}</span> / In <span>{{ site.title }}</span> / <span>Comments</span>
+							</p>
+									<h3 class="text-bold"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></h3>
+									{{ item.excerpt | remove: '
+									<p>' | remove: '</p>' }}
+								<p class="padding-wrap-sm">
+								<a href="{{ site.baseurl }}{{ item.url }}" class="btn btn-primary text-uppercase" role="button">Read more</a>
+							</p>
+									<hr>
+								</div>
+							</div>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+			<!--Side bar Start-->
+			<div class="col-md-2 col-md-offset-1">
+				<section class="blog-shortcut">
+				<h3 class="text-reg">Latest News</h3>
+				{% for item in site.news limit: 10 %}
+					<ul class="list-unstyled">
+						<li>
+						<a href="{{ item.url}}">{{ item.title }}</a>
+						</li>
+					</ul>
+				{% endfor %}
+				</section>			
+			</div>
+			<!--Side bar End-->
+		</div>
+	</div>
+</section>
+<!-- News listing End -->

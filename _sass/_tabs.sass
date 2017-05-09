@@ -1,0 +1,57 @@
+
+ul.tabs
+	li
+		list-style: none
+
+		@include phone
+			float: left
+			margin-top: 10px
+
+		@include tablet
+			float: none
+
+#portfolio-work
+	#thumbnails
+		min-height: 250px
+
+		li
+			float: left
+			padding: 5px
+			display: inline-block
+
+			@include phone
+				width: 100%
+
+			@include phone-ls
+				width: 50%
+
+			@include tablet
+				width: 25%
+	a.thumbnail
+		position: relative
+		overflow: hidden
+
+		h2
+			font-size: 18px
+
+		.caption
+			position: absolute
+			display: flex
+			flex-direction: column
+			justify-content: center
+			width: inherit
+			height: inherit
+			background-color: rgba(0, 0, 0, 0.75)
+			color: #fff
+			top: 1000px 
+			right: 0
+			bottom: 0
+			left: 0
+			transition: all 250ms ease-in
+
+
+		&:hover
+			.caption
+				top: 0
+
+	

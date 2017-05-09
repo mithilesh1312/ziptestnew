@@ -1,0 +1,16 @@
+<div class="blue-boxes">
+	<div class="padding-wrap-lg">
+		{% for item in page.features_4 %}
+		<div class="col-md-3 col-sm-6 col-xs-12">
+			<a href="{{item.link}}" class="thumbnail text-center">
+				<img src="{{ site.baseurl }}/assets/images/{{item.image}}"/>
+				<div class="caption">
+					<h3>{{ item.caption }}</h3>
+					<p>{{ item.description }}</p>
+				</div>
+			</a>
+		</div>
+		{% endfor %}
+		<div class="clear">&nbsp;</div>
+	</div>
+</div>

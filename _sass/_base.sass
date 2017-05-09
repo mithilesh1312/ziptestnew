@@ -1,0 +1,247 @@
+body
+	font-family: $roboto-reg
+	color: $text-title
+
+h1, 
+h2, 
+h3,
+h4, 
+h5, 
+h6,
+p,
+blockquote
+	font-family: $mont-light
+	&.text-reg
+		font-family: $mont-reg
+	&.text-light
+		font-family: $mont-light
+	&.text-bold
+		font-family: $mont-bold
+
+.text-bold
+	font-family: $mont-bold
+.text-reg	
+	font-family: $mont-reg
+.text-light
+	font-family: $mont-light
+ul
+	padding-left: 0
+	
+.indent
+	display: block
+	text-indent: -9999px
+
+.highlight
+	color: $highlight-color
+	
+
+	&.bg
+		color: #fff
+		background-color: $highlight-color
+
+h1
+	&.highlight
+		font-size: 350%
+
+b,
+strong
+	font-family: $roboto-bold
+
+a
+	>b,
+	>strong
+		font-family: inherit
+		color: $firm-color
+
+.padding-wrap-xl-both
+	padding-top: 100px
+	padding-bottom: 100px
+
+.padding-wrap-xl
+	padding-top: 100px
+	padding-bottom: 90px
+
+.padding-wrap-lg-both
+	padding-top: 60px
+	padding-bottom: 60px
+	
+.padding-wrap-lg
+	padding-top: 60px
+	padding-bottom: 50px
+	
+.padding-wrap-md
+	padding-top: 30px
+	padding-bottom: 20px
+	
+.padding-wrap-sm
+	padding-top: 20px
+	padding-bottom: 10px
+	
+.padding-wrap-xs
+	padding-top: 10px
+	padding-bottom: 5px
+	
+.border_bottom
+	border-bottom: 1px solid transparentize($light-color, 0.7)
+
+.img-wrap
+	img
+		width: 100%
+		height: auto
+
+.btn
+	font-family: $mont-reg
+	
+.btn-warning,
+.btn-primary,
+.btn-success
+	margin-left: 5px
+	margin-right: 5px
+	
+.btn-warning
+	background:
+		color: $firm-color
+	border:
+		color: $firm-color-border
+	
+	&:hover
+		background:
+			color: $firm-color-hov
+		border:
+			color: $firm-color-border-hov
+	
+.btn-primary
+	background:
+		color: $base-color
+	border:
+		color: $base-color-border
+	
+	&:hover
+		background:
+			color: $base-color-hov
+		border:
+			color: $base-color-border-hov
+	
+.btn-success
+	background:
+		color: $success-color
+	border:
+		color: $success-color
+	
+	&:hover
+		background:
+			color: $success-color-hov
+		border:
+			color: $success-color-hov
+	
+.btn-info
+	background:
+		color: $highlight-color
+	border:
+		color: $highlight-color
+	
+	&:hover
+		background:
+			color: $highlight-color-hov
+		border:
+			color: $highlight-color-hov
+
+.button-wrap
+	>a
+		width: 45%
+		&.btn
+			padding: 16px 16px
+	
+			&.btn-lg
+				padding: 23px 16px
+	
+		
+	
+form
+	font-family: $mont-reg
+ 
+	&.form-horizontal
+		.form-group
+			>div
+				@include phone
+					margin-top: 5px
+					margin-bottom: 5px
+				@include tablet-ls
+					margin-top: 0
+					margin-bottom: 0
+
+.clearfix
+	&.panel
+		margin-top: 15px
+
+.panel
+	.caption
+		color: $feature-color
+		
+		h5
+			line-height: 1.5 
+
+.quote
+	line-height: 2
+
+	&.lead
+		line-height: 1.7
+
+	@include phone
+		margin-bottom: 30px
+		border-bottom: 1px solid transparentize($light-color, 0.7)
+	
+	@include tablet-ls
+		margin-bottom: 0
+		border-bottom: none
+
+.arrow-down
+	position: relative
+	
+	&:after
+		position: absolute
+		display: block
+		top: 10px
+		left: 10px
+		width: 64px
+		height: 82px
+		background:
+			image: url('../assets/images/bg-arrow-down.png')
+			position: top left
+			repeat: no-repeat
+		content: ""
+		
+		@include phone
+			display: none
+
+		@include tablet-ls
+			display: block
+  
+.arrow-right-down
+	position: relative
+
+	&:after
+		position: absolute
+		background: 
+			image: url('../assets/images/bg-arrows-swish.png') 
+			repeat: no-repeat 
+			position: top left
+		width: 78px
+		height: 68px
+		background-position: top right
+		left: auto
+		right: 0
+		bottom: -60px
+		content: ''
+
+		@include phone
+			display: none
+
+		@include tablet-ls
+			display: block
+	
+.dropdown-menu
+	min-width: 100%
+	text-align: right
+
+

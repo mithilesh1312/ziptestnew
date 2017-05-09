@@ -1,0 +1,29 @@
+<footer class="container-fluid padding-wrap-lg">
+	<div class="container">
+		<div id="footer" class="col-lg-11">
+			{% for entry in site.footer %}
+			<div class="col-lg-2">
+				<h4>{{ entry.title }}</h4>
+				<ul class="list-unstyled">
+				
+					{% for subcategory in entry.subcategories %}
+					{% if subcategory.external == null %}
+					<li><a href="{{ site.baseurl }}/{{ subcategory.link }}">{{ subcategory.name }}</a></li>
+					{% else %}
+					<li><a href="{{ subcategory.link }}" target="_blank">{{ subcategory.name }}</a></li>
+					{% endif %}
+					{% endfor %}
+				</ul>
+			</div>
+			{% endfor %}
+		</div>
+		<div class="container">
+			<div class="col-lg-12">
+				<div class="copyright padding-wrap-sm">
+					&copy; Zip Schedules &middot; Restaurant Scheduling Software | 3191 Red Hill Ave. Costa Mesa CA 92626 USA |
+					<a href="{{ site.baseurl }}/terms-of-service-privacy-policy"><span>Terms of Service & Privacy Policy</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>

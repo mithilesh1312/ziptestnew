@@ -1,0 +1,43 @@
+#header-snap
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 999
+	background-color: rgba(255,255,255,0.97)
+	border-bottom: 1px solid #eee
+
+	.try-it-arrow
+		position: relative
+		&:after
+			position: absolute
+			background:
+				image: url(../assets/images/bg-arrow-right.png)
+				repeat: no-repeat
+				size: cover
+				position: center
+			content: ''
+			right: -10px
+			top: 30px
+			width: 65px
+			height: 18px
+	
+		h4, h6
+			font-family: $mont-light	
+	
+		.btn-link
+			color: $firm-color
+			font-family: $mont-light	
+	
+	.form-inline
+		margin-top: 25px
+	
+		button
+			margin: 0
+	
+	@include phone
+		visibility: hidden
+	
+	@include tablet-ls
+		visibility: visible
+	

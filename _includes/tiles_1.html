@@ -1,0 +1,12 @@
+<div id="homepage-logos">
+	<div class="padding-wrap-lg">
+		<div class="text-center">
+			<h2>{{page.tiles_headline}}</h2>
+		</div>
+		<div class="container text-center"> 
+			{% for item in page.tiles %}
+			<img src='{{ site.baseurl }}/assets/images/{{item.tilelogo}}' height="130px" style="padding:20px;" title="{{ item.tilename }}" /> 
+			{% endfor %}
+		</div>
+	</div>
+</div>

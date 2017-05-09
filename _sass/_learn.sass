@@ -1,0 +1,73 @@
+.tutor
+	position: absolute
+	z-index: 3
+	width: 100%
+	font-family: $mont-light
+
+	img
+		position: absolute
+		left: 50%
+		margin-left: -65px
+		width: 130px
+		height: 130px
+		bottom: -65px
+	
+	span
+		position: absolute
+		top: -20px
+		
+		&.hosted-by
+			left: 29%
+			
+		&.position
+			left: 57%
+	
+		@include phone
+			display: none
+		
+		@include tablet
+			display: block
+		
+			
+
+.webinar-cover
+	margin-top: 40px
+	max-width: 570px
+	padding-left: 10px
+	padding-rigth: 10px
+
+	h2
+		font-size: 24px
+	
+	ul
+		padding-left: 15px
+	
+		li
+			margin: 15px 0
+	
+	i
+		color: $firm-color
+		font-size: 20px
+		float: left
+		margin-right: 10px
+	
+	span
+		font-family: $mont-light
+	
+.webinar-upcoming
+	background-color: $feature-color
+	color: #fff
+
+	.thumbnail
+		background:
+			color: $feature-color-dark
+		width: 300px
+		padding-bottom: 20px
+		margin-top: 15px
+		margin-bottom: 25px
+	
+.webinar-video
+	
+	h2,
+	p
+		margin: 0

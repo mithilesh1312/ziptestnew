@@ -1,0 +1,54 @@
+<!--Add the code below to page's front-matter-->
+
+<!--
+### Tiles
+tiles_par_1: Our clients
+tiles_par_2: Awards
+client-tiles:
+  - name: TacoBell
+    img: /img/tiles/chipotle-106.png
+  - name: TacoBell
+    img: /img/tiles/noodlescompany-125.png
+  - name: TacoBell
+    img: /img/tiles/jblogo-113.png
+  - name: TacoBell
+    img: /img/tiles/tacobell-125.png
+awards-tiles:
+  - name: Deloitte
+    img: /img/tiles/deloitte-technology-111.png
+  - name: "Editor's choice"
+    img: /img/tiles/rmagazine-editors-choice-123.png
+-->
+
+<div class="container-fluid padding-wrap-md">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="col-md-2"><p class="text-reg">{{ page.tiles_par_1 }}</p></div>
+				<div class="col-md-10 border_bottom">
+					<p class="lead"></p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="col-md-3">
+					<p class="text-reg">{{ page.tiles_par_2 }}</p>
+				</div>
+				<div class="col-md-9 border_bottom">
+					<p class="lead"></p>
+				</div>
+			</div>
+		</div>
+		<div class="row padding-wrap-sm">
+			<div class="col-md-8 tiles">
+			{% for item in page.client-tiles %}
+				<div class="col-md-3" style="background-image: url({{ site.baseurl }}/assets/images/{{ item.img }})"></div>
+			{% endfor %}	
+			</div>
+			<div class="col-md-4 tiles">
+			{% for item in page.awards-tiles %}
+				<div class="col-md-6" style="background-image: url({{ site.baseurl }}/assets/images/{{ item.img }})"></div>
+			{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>

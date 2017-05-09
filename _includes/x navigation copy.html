@@ -1,0 +1,144 @@
+<nav class="navbar navbar-default">
+	<div class="nav-wrap">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<div class="navbar-brand">
+				<div class="clearfix">
+					<a class="logo indent" href="{{ site.baseurl }}/index.html" style="background-image: url({{ site.baseurl }}/assets/images/{{ site.logo }})">{{ site.logo_title }} </a>
+				</div>
+				<div class="logo-subheading"><em>{{ site.logo_subtitle }}</em></div>
+			</div>
+		</div>
+
+<!-- Navigation Top -->
+		{% if site.nav_top_show %}
+		<div class="top-nav">
+
+			{% if site.nav_contact_show %}
+			<a href="{{ site.baseurl }}/{{ site.nav_contact_URL }}">{{ site.nav_contact }}</a> 
+			{% endif %}
+			 
+			{% if site.nav_webinar_show %} 
+			&middot;
+			<a href="{{ site.baseurl }}/{{ site.nav_webinar_URL }}">{{ site.nav_webinar }}</a> 
+			{% endif %} 
+			
+			{% if site.nav_blog_show %} 
+			&middot;
+			<a href="{{ site.baseurl }}/{{ site.nav_blog_URL }}">{{ site.nav_blog }}</a> 
+			{% endif %} 
+			
+			{% if site.nav_resources_show %} 
+			&middot;
+			<a href="{{ site.baseurl }}/{{ site.nav_resources_URL }}">{{ site.nav_resources }}</a> 
+			{% endif %} 
+			
+			{% if site.nav_language_show %} 
+			&middot;
+			<a href="{{ site.baseurl }}/{{ site.nav_language_URL }}"> {{ site.nav_language }} <img src="{{ site.baseurl }}/assets/flags/{{ site.nav_language_flag }}" width="35" hspace="5"></a> 
+			{% endif %}
+
+		</div>
+		{% endif %}
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		
+		{% if site.nav_dropdown_menu == true %}
+		
+		<ul class="nav navbar-nav navbar-right text-uppercase">
+	
+		{% for item in site.data.navigation.menu %}
+			<li class="{{ item.class }}">
+			{% if item.class == 'dropdown' %}
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ item.name }}</a> 
+			{% else %}
+				<a href="{{ item.link }}">{{ item.name }}</a> 
+			{% endif %} 
+
+			{% if item.sub-items %}
+				<ul class="dropdown-menu">
+				{% for subitem in item.sub-items %}
+				<li><a href="{{ subitem.link }}">{{ subitem.name }}</a></li>
+				{% endfor %}
+				</ul>
+			{% endif %}
+			</li>
+			{% endfor %}
+
+		</ul>			
+		{% else %}	
+		
+			<ul class="nav navbar-nav navbar-right text-uppercase">
+			{% if site.nav_features_show %}
+			<li>
+				<a href="{{ site.baseurl }}/{{ site.nav_features_URL }}">{{ site.nav_features }}</a>
+			</li>
+			{% endif %} {% if site.nav_mobile_show %}
+			<li>
+				<a href="{{ site.baseurl }}/{{ site.nav_mobile_URL }}">{{ site.nav_mobile }}</a>
+			</li>
+			{% endif %} {% if site.nav_customers_show %}
+			<li>
+				<a href="{{ site.baseurl }}/{{ site.nav_customers_URL }}">{{ site.nav_customers }}</a>
+			</li>
+			{% endif %} {% if site.nav_pricing_show %}
+			<li>
+				<a href="{{ site.baseurl }}/{{ site.nav_pricing_URL }}">{{ site.nav_pricing }}</a>
+			</li>
+			{% endif %} {% if site.nav_btn_signup_show %}
+			<li> 
+				<a href="{{ site.baseurl }}/{{ site.nav_btn_signup_URL }}" class="text-center text-uppercase btn-signup">{{ site.nav_btn_signup }}</a>
+			</li>
+			{% endif %} {% if site.nav_btn_login_show %}
+			<li>
+				<a href="{{ site.baseurl }}/{{ site.nav_pricing_URL }}" class="text-center text-uppercase btn-login">{{ site.nav_btn_login }}</a>
+			</li>
+		{% endif %}
+		</ul>		
+		{% endif %}
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container-fluid -->
+</nav>
+
+{% if site.nav_cta_show %}
+<div id="header-snap" class="navbar navbar-default" style="display:none">
+	<div class="nav-wrap">
+		<div class="navbar-brand col-md-3">
+			<div class="clearfix">
+				<a class="logo indent" href="{{ site.baseurl }}/index.html" style="background-image: url({{ site.baseurl }}/assets/images/{{ site.logo }})">{{ site.logo_title }}</a>
+			</div>
+			<div class="logo-subheading"><em>{{ site.logo_subtitle }}</em></div>
+		</div>
+
+		<div class="col-md-3 try-it-arrow">
+			<h4>{{ site.nav_cta_headline }}</h4>
+			<h6>{{ site.nav_cta_subheadline }}</h6>
+			<h6 class="try-read-customers"><a href="{{ site.baseURL }}/{{ site.nav_cta_subheadline2_URL }}" class="btn-link">{{ site.nav_cta_subheadline2 }}</a>.</h6>
+		</div>
+
+		<div class="col-md-6">
+
+			<form class="form-inline" method="post">
+				<div class="form-group">
+					<input type="text" class="form-control input-sm" id="" placeholder="Full Name" name="signup_full_name">
+				</div>
+				<div class="form-group">
+					<input type="email" class="form-control input-sm" id="" placeholder="Email address" name="signup_email">
+				</div>
+				<button type="submit" class="btn btn-warning btn-sm" name="signup_home_create_account">{{ site.cta_btn_signup }}</button>
+			</form>
+
+		</div>
+	</div>
+</div>
+
+{% endif %}

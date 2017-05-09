@@ -1,0 +1,48 @@
+<!--Add the code below to page's front-matter-->
+
+<!--
+### Hero Block 3
+
+#Headline
+hb3_headline: "Transform ordinary managers into <br>sales and profit <strong>super-achievers</strong>"
+
+#Sub-headline
+hb3_subheadline: Running your business with Back Office is simple and fun. A clean, intuitive interface makes <br> tasks like taking inventory or creating work schedules unbelievably quick.  Its ease of use will make you feel right at home.
+
+#Hero Image
+hb3_img: /img/imac-preview-1516.jpg
+
+#Short Videos button  goto Customers page
+hb3_video_btn_text: Request a Demo
+hb3_video_btn_link: /customers
+
+#Request a Demo button  goto Contact Us Page
+hb3_request_btn_text: Watch the video
+hb3_request_btn_link: /contact-us
+-->
+
+
+<div class="container padding-wrap-md">
+	<div class="row text-center">
+		<h1 class="highlight">{{ page.hero_3_headline }}
+		</h1>
+		<p class="padding-wrap-sm">
+			{{ page.hero_3_subheadline }}
+		</p>
+	</div>
+	<div class="row">
+		<div class="col-sm-4 col-sm-offset-4">
+			<div class="button-wrap clearfix padding-wrap-sm" role="group">
+					<a class="btn btn-success pull-left" href="{{ site.baseurl }}{{ page.hero_3_request_btn_link }}">{{ page.hero_3_request_btn_text }}</a>
+					<a class="btn btn-link pull-right" href="{{ site.baseurl }}{{ page.hero_3_video_btn_link }}">{{ page.hero_3_video_btn_text }}
+					&nbsp;<i class="fa fa-play-circle-o" aria-hidden="true"></i>
+					</a>
+				</div>
+		</div>
+	</div>
+	<div class="row padding-wrap-md">
+		<div class="col-md-8 col-md-offset-2 img-wrap">
+			<img src="{{ site.baseurl }}/assets/images/{{ page.hero_3_img }}" alt="" class="img-responsive">
+		</div>
+	</div>
+</div>

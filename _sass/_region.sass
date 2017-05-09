@@ -1,0 +1,60 @@
+.region
+	margin-bottom: 30px
+
+.flag
+	background-repeat: no-repeat
+	background-size: 30px 30px
+	display: inline-block
+	width: 30px
+	height: 30px
+	margin-right: 6px
+	vertical-align: middle
+
+.country-caption
+	font-size: 12px
+	line-height: 1.5
+	font-weight: 400
+	letter-spacing: 0em
+
+.countrylist-item
+	float: left
+	height: 30px
+	margin: 19px 0
+
+	@include phone
+		width: 100%
+	
+	@include tablet
+		width: 25%
+	
+	@include desktop
+		width: 16.6%
+
+	a
+		&:hover
+			text-decoration: none
+
+.countrylist-caption
+	color: #666
+	display: inline-block
+	vertical-align: middle
+
+	@include phone
+		width: 220px
+	
+	@include tablet
+		width: 102px
+	
+	&.caption-top
+		
+	
+		@include phone
+		width: 220px
+		vertical-align: middle
+		margin-top: 0
+	
+		@include tablet
+			width: 102px
+			vertical-align: top
+			margin-top: -3px
+	

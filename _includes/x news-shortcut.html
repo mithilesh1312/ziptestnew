@@ -1,0 +1,10 @@
+<section class="blog-shortcut">
+	<h3 class="text-reg">Latest News</h3>
+	{% for item in site.news limit: 10 %}
+	<ul class="list-unstyled">
+		<li>
+			<a href="{{ item.url}}">{{ item.title }}</a>
+		</li>
+	</ul>
+	{% endfor %}
+</section>

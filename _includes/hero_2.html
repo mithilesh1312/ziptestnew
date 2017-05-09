@@ -1,0 +1,61 @@
+<!--Add the commented code below to page front-matter-->
+<!--
+### Hero Block #2
+#Headline
+#Sub-headline
+sub-headline: Altametrics clients are driving business strategy, achieving better operations, and engaging customers.
+#Hero Image
+#Icons with text
+wrap-items:
+  - name: Healthcare
+    img: /img/items-lg/caduceus8-75.png
+  - name: Hospitality
+    img: /img/items-lg/cutlery6-76.png
+  - name: Restaurants
+    img: /img/items-lg/gasstation2-75.png
+  - name: "C-store & Gas"
+    img: /img/items-lg/leisure1-75.png
+
+#Short Videos button
+video_btn_link: /customers
+video_btn_text: Short videos
+
+#Request a Demo button 
+request_btn_link: /contact-us
+request_btn_text: Request a demo
+-->
+
+
+<div class="container-fluid" id="hero-block">
+	<div class="container">
+		<div class="row text-center padding-wrap-md">
+			<h1 class="highlight">{{ page.hero_2_headline }}</h1>
+		</div>
+		<div class="row">
+			<div class="col-md-6 img-wrap">
+				<img class="img-responsive" src="{{ site.baseurl }}/assets/images/{{ page.hero_2_img }}" alt="{{ page.hero_2_headline }}">
+			</div>
+			<div class="col-md-6">
+				<p class="quote text-reg lead">
+					{{ page.hero_2_subheadline }}
+				</p>
+				<div class="item-wrap padding-wrap-sm clearfix">
+				{% for item in page.hero_2_items %}
+					<div class="menu-item lg text-center">
+						<span class="img-item">
+							<img class="center-block" src="{{ site.baseurl }}/assets/images/{{ item.img }}" alt="{{ item.name }}">
+						</span>
+						<span class="text-item text-uppercase">{{ item.name }}</span>
+					</div>
+				{% endfor %}	
+					
+				</div>
+				<div class="button-wrap clearfix padding-wrap-sm" role="group">
+					<a class="btn btn-info btn-lg pull-left" href="{{ site.url }}{{ page.hero_2_video_btn_link }}">{{ page.hero_2_video_btn_text }}</a>
+					<a class="btn btn-success btn-lg pull-right" href="{{ site.url }}{{ page.hero_2_request_btn_link }}">{{ page.hero_2_request_btn_text }}</a>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>

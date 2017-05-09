@@ -1,0 +1,169 @@
+---
+layout: default
+permalink: restaurant-mobile-scheduling-apps
+
+title: Easy Restaurant Scheduling Software. Try it Free. | Zip Schedules
+description: Scheduling software made for restaurants. Control your labor costs, communicate with staff and keep everyone in-the-loop with a free mobile apps.
+
+# Hero background image and headline text at the top of the page
+hero_img_bg: cafe_cut.jpeg
+hero_headline: Mobile Scheduling Apps for iOS & Android
+hero_subheadline: Restaurant scheduling app for managers and employees.
+
+# App store and Google play market Section
+mobile_p1: When you <a href="../../signup">SIGN UP</a> for Zip Schedules, you and your employees have access to our <strong>FREE</strong> mobile apps.
+mobile_p2: Employees can check their schedule and submit requests from anywhere. Managers can manage shift changes, approve time off requests and more.
+btn_apple_text: Download on the AppStore
+btn_apple_link: https://itunes.apple.com/us/app/zip-schedules/id885618791?mt=8
+btn_apple_img: apple@2x.png
+btn_google_text: Get it on Google Play
+btn_google_link: https://play.google.com/store/apps/details?id=com.altametrics.rib.zipschedules.activities&hl=en
+btn_google_img: google@2x.png
+
+# Feature Spotlight
+features:
+  - feature_headline: Publish schedules from anywhere
+    feature_image: schedule.png
+    feature_image_position: right
+    subheadline1: Your schedule, at your ﬁngertips
+    subheadline1_description: Access to your schedule on-the-go and sort it by time, roll, employee and department.
+    subheadline2: Add, change and update shifts as needed
+    subheadline2_description: Make adjustments to the schedule whenever you like. <br>Edit shifts, add shifts and delete shifts as needed.
+  - feature_headline: Manage requests on-the-go
+    feature_image: notifications-2x.png
+    feature_image_position: left
+    subheadline1: Update & submit availability
+    subheadline1_description: Staff can set their availability through the app and all changes are sent to managers for review and approval.
+    subheadline2: Approve time-off requests
+    subheadline2_description: Get notiﬁed when an employee makes an availability request and approve or deny it on-the-ﬂy.
+  - feature_headline: Streamline staff communication
+    feature_image: chats.png
+    feature_image_position: right
+    subheadline1: Message employees & create group chats
+    subheadline1_description: Chat with individual employees, create group chats and start conversations with the people assigned to specific departments and roles in your restaurant.
+    subheadline2: Send announcements to everyone
+    subheadline2_description: Need to send an update to all staff? Send an announcement that they will receive via email and push notification.
+  - feature_headline: Assign shift trades quickly
+    feature_image: shift-pool.png
+    feature_image_position: left
+    subheadline1: Staff can bid on shifts
+    subheadline1_description: Employees can see open shifts in the shift pool and bid to pick them.
+    subheadline2: Assign shift replacements
+    subheadline2_description: Managers can choose who they would like to assign a shift to and employees are notiﬁed of the changes.
+
+# More Features
+# To change the Icon just Choose proper ICON on FontAwesome website and change img value that will add a class for example "fa-user", "fa-cultery"
+
+more_features_headline: Our mobile apps also include...
+more_features:
+  - title: Mobile Manager Log Book
+    description: Our support team is only a phone call away. We want you to be successful in seeing the value in scheduling software, so we help you whenever you need it.
+    icon: fa-address-book
+  - title: Timesheets
+    description: We integrate seamlessly with some of the top restaurant POS systems in the industry. 7shifts brings in historical sales data and predicts your upcoming sales to help you schedule more accurately.
+    icon: fa-check-square-o
+  - title: Events Calendar
+    description: Rather than building software that works 'ok' for all industries, we decided to make 7shifts work perfectly for restaurants. Every feature we build has been designed with restaurant owners, managers, and employees in mind.
+    icon: fa-calendar
+
+# Other Includes
+testimonials-1_show: true
+webinar_show: true
+appmarket_show: false
+
+---
+<!--### Hero background Start-->
+<div class="hero" style="background-image: url({{ site.baseurl }}/assets/images/{{ page.hero_img_bg }})">
+	<div class="padding-wrap-lg-both tint text-center">
+		<div class="container">
+			<h1>{{ page.hero_headline }}</h1>
+		</div>
+	</div>
+</div>
+<!--### Hero background End-->
+
+<!--Subheader Start-->
+<div class="container-fluid">
+	<div class="padding-wrap-sm text-center">
+		<div class="container">
+			<h2 class="text-light">{{ page.hero_subheadline }}</h2>
+		</div>
+	</div>
+</div>
+<!--Subheader End-->
+
+<!--Buttons Block Appstore and Google playmarket Start-->
+<div class="padding-wrap-sm text-center">
+	<div class="container">
+		<div class="col-md-8 col-md-offset-2">
+			<p class="text-reg">{{ page.mobile_p1 }}</p>
+			<p class="text-reg">{{ page.mobile_p2}}</p>
+			<div class="row btn-mobile-wrap">
+			
+				<a href="{{ page.btn_apple_link}}" target="_blank" class="btn-mobile" style="background-image: url({{ site.baseurl }}/assets/images/{{ page.btn_apple_img }})">{{ page.btn_apple_text }}</a>
+				
+				<a href="{{ page.btn_google_link}}" target="_blank" class="btn-mobile" style="background-image: url({{ site.baseurl }}/assets/images/{{ page.btn_google_img }})">{{ page.btn_google_text }}</a>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Features -->
+<div id="advantages" class="">
+	<div class="container">
+	{% for item in page.features %}
+		{% if item.feature_image_position == 'right' %}
+		<div class="padding-wrap-md">
+			<div class="row">
+				<div class="col-md-5">
+					<h3 class="padding-wrap-sm">{{ item.feature_headline }}</h3>
+					<h4>{{ item.feature_subheadline1 }}</h4>
+					<p>{{ item.subheadline1_description }}</p>
+					<h4>{{ item.subheadline2 }}</h4>
+					<p>{{ item.subheadline2_description }}</p>
+				</div>
+				<div class="col-md-6 col-md-offset-1 sw-wrap-lg">
+					<div class="padding-wrap-md sw-img-bg uno" style="background-image: url({{ site.baseurl }}/assets/images/{{ item.feature_image }})">
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endif %}
+		{% if item.feature_image_position == 'left' %}
+		<div class="padding-wrap-md">
+			<div class="row">
+				<div class="col-md-6 sw-wrap-sm">
+					<div class="padding-wrap-md sw-img-bg dos" style="background-image: url({{ site.baseurl }}/assets/images/{{ item.feature_image }})">
+					</div>
+				</div>
+				<div class="col-md-5 col-md-offset-1">
+					<h3 class="padding-wrap-sm">{{ item.feature_headline }}</h3>
+					<h4>{{ item.feature_subheadline1 }}</h4>
+					<p>{{ item.subheadline1_description }}</p>
+					<h4>{{ item.subheadline2 }}</h4>
+					<p>{{ item.subheadline2_description }}</p>
+				</div>
+			</div>
+		</div>
+		{% endif %}
+	{% endfor %}
+	</div>
+</div>
+
+<!-- More Features -->
+<div id="other-features">
+	<div class="padding-wrap-lg">
+		<div class="container text-center padding-wrap-sm">
+			<h4 class="text-reg">{{ page.more_features_headline }}</h4>
+		</div>
+		<div class="container">
+			{% for item in page.more_features %}
+			<div class="col-md-4">
+				<h5><i class="fa {{ item.icon }}" aria-hidden="true"></i>{{ item.title }}</h5>
+				<p class="text-reg">{{ item.description }}</p>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

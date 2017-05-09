@@ -1,0 +1,69 @@
+
+.blog-listing
+	.thumbnail
+		@include phone
+			margin-bottom: 30px
+
+		@include tablet-ls
+			margin-bottom: 20px
+			padding-bottom: 20px
+
+		.caption
+			padding: 10px 0 0
+
+		p
+			line-height: 1.7
+
+		h3
+			color: $text-title
+			a
+				color: $text-title
+
+				&:hover
+					text-decoration: none
+					color: $firm-color
+		a.btn-primary
+			margin: 0
+
+
+p.info
+	span,
+	a
+		color: $firm-color
+
+.blog-shortcut
+	h3
+		margin-bottom: 20px
+	a
+		color: $text-title
+		font-family: $mont-light
+
+.pagination
+	.badge
+		font-size: inherit
+		vertical-align: baseline
+		background-color: $firm-color
+	
+	a
+		color: $firm-color
+		
+		&:hover
+			color: $firm-color-hov
+
+	i
+		margin-left: 5px
+		margin-right: 5px
+	
+.pager
+	li
+		>a
+			background-color: $firm-color
+			border-color: $firm-color-border
+			color: #fff
+	
+			&:hover
+				background-color: $firm-color-hov
+				border-color: $firm-color-border-hov
+	
+			i
+				margin: 0 5px

@@ -1,0 +1,29 @@
+<div id="homepage-discover_apps">
+<div class="inner" class="bloc l-bloc bgc-white" id="bloc-0">
+	<div class="container bloc-lg">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1 class="text-center mg-md">
+					{{ site.disc_headline }}
+				</h1>
+				<h2 class="text-center sub-heading ">
+					{{ site.disc_subheadline }}
+				</h2>
+			</div>
+		</div>
+		<div class="row voffset">
+			{% for item in site.disc_apps %}
+			<div class="col-sm-2">
+				<a href="http://{{ item.app_URL }}" data-lightbox="{{ site.baseurl }}/assets/images/{{ item.app_image }}" data-caption="Image description" data-gallery-id="gallery-1"><img src="../../assets/images/{{ item.app_image }}" class="img-responsive" /></a>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+    <div class="clear">&nbsp;</div>
+    {% if site.disc_btn_show_appmarket %}
+    <a href="http://{{ site.disc_appmarket_URL }}" class="btn btn-dark">Visit the Hubworks App Store</a>
+    {% endif %}
+	<div class="clear">&nbsp;</div>
+	<div class="clear">&nbsp;</div>
+
+</div>

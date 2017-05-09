@@ -1,0 +1,162 @@
+---
+layout: default
+permalink: restaurant-scheduling-webinar
+
+title: Easy Restaurant Scheduling Software. Try it Free. | Zip Schedules
+description: Scheduling software made for restaurants. Control your labor costs, communicate with staff and keep everyone in-the-loop with a free mobile apps.
+
+image:
+#author: zip schedules
+
+### Hero background image and headline text at the top of the page
+hero_img_bg: tutor.jpeg
+hero_headline: Contact Us
+hero_subheader: Learn how to get up and running with 7shifts to improve your scheduling
+learn_btn_signup: Reserve Your Spot
+hero_paragraph: 'Next webinar: Wednesday, April 12th @ 2:00 PM (EST) <br> or check out our other <a class="btn-link" href=""><strong>upcoming webinars</strong></a>'
+
+### Webinar Tutor
+tutor_img: stacey-profile.png
+tutor_name: Stacey Lawrence
+tutor_position: Product Specialist
+
+### Webinar Cover
+webinar_cover_h2: "During our 30-minute webinar we will cover:"
+webinar_agenda:
+  - The features available to you in the 7shifts platform
+  - How to quickly setup your account and get it configured
+  - How to create your schedule and add your employees
+  - How to communicate effectively with your staff and management
+  - Provide an opportunity to answer any questions you may have
+  
+### Webinar upcoming Block
+webinar_upcoming_h2: Upcoming webinars
+webinar_upcoming_p1: We run weekly webinars in order to fit your schedule.
+webinar_upcoming_p2: Here are some spots we have lined up for the coming weeks.
+
+webinar_upcoming:
+  - day: Wednesday
+    date: April 19th
+    time: 2:00 PM (EST)
+    duration: "Duration: 30 minutes"
+    button_text: Reserve My Spot
+    button_link: #
+  - day: Wednesday
+    date: April 12th
+    time: 2:00 PM (EST)
+    duration: "Duration: 30 minutes"
+    button_text: Reserve My Spot
+    button_link: 
+
+### Video Block
+video_p: Missed it? No sweat.
+video_h2: Watch a pre-recorded one!
+video_link: https://fast.wistia.net/5c3f504b-bd3a-4d25-b4a4-881f0948c272
+video_poster: chef.jpeg
+
+# Other Includes
+testimonials-1_show: true
+webinar_show: true
+appmarket_show: false
+
+---
+
+
+<!--### Hero Block Start-->
+<div class="hero" style="background-image: url({{ site.baseurl }}/assets/images/{{ page.hero_img_bg }})">
+	<div class="padding-wrap-lg-both tint text-center">
+		<div class="container">
+			<h1 class="text-light">{{ page.hero_headline }}</h1>
+			<p class="text-light padding-wrap-sm">{{ page.hero_subheader }}</p>
+			<div class="text-center">
+			<form class="form-inline" method="post">
+				<div class="form-group">
+					<input type="text" class="form-control" id="" placeholder="Full Name" name="signup_full_name">
+				</div>
+				<div class="form-group">
+					<input type="email" class="form-control" id="" placeholder="Email address" name="signup_email">
+				</div>
+				<button type="submit" class="btn btn-warning" name="signup_home_create_account">{{ page.learn_btn_signup }}</button>
+			</form>
+		</div>
+		<p class="text-light padding-wrap-sm">{{ page.hero_paragraph }}</p>
+		</div>
+	</div>
+	<div class="tutor">
+		<span class="hosted-by">Hosted by {{ page.tutor_name }}</span>
+		<img class="img-circle" src="{{ site.baseurl }}/assets/images/{{ page.tutor_img }}" alt="">
+		<span class="position">{{ page.tutor_position }}</span>
+	</div>
+</div>
+<!--### Hero Block End-->
+
+<!--### Webinar Cover list Start-->
+<div class="webinar-cover center-block padding-wrap-md">
+	<div class="text-center">
+		<h2 class="text-light">{{ page.webinar_cover_h2 }}</h2>
+	</div>
+	<div>
+		<ul class="list-unstyled">
+			{% for item in page.webinar_agenda %}
+			<li class="text-light"><i class="fa fa-check-square-o" aria-hidden="true"></i><span>{{ item }}</span></li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+<!--### Webinar Cover list End-->
+
+<!--Webinar Upcoming Block Start-->
+<div class="webinar-upcoming padding-wrap-sm">
+	<div class="row text-center">
+		<h2 class="text-light">{{ page.webinar_upcoming_h2 }}</h2>
+		<p class="text-light">{{ page.webinar_upcoming_p1 }} <br>
+		{{ page.webinar_upcoming_p2 }}
+		</p>
+	</div>
+	<div class="container">
+		<div class="row clearfix">
+		
+		{% for item in page.webinar_upcoming %}
+			<div class="col-sm-6">
+				<div class="thumbnail text-center center-block">
+					<h3 class="text-light">{{ item.day }}, <br>{{ item.date }}</h3>
+					<p class="lead text-light">
+						{{ item.time }}
+					</p>
+					<p class="text-light">
+						{{ item.duration }}
+					</p>
+					<a href="{{ item.button_link }}" class="btn btn-warning">{{ item.button_text }}</a>
+				</div>
+			</div>
+		{% endfor %}
+			
+		</div>
+	</div>
+</div>
+<!--Webinar Ucoming Block End-->
+
+<!--### Video Block Start-->
+<div class="webinar-video padding-wrap-lg-both">
+	<div class="container">
+		<div class="row text-center">
+			<p class="text-light">{{ page.video_p }}</p>
+			<h2 class="text-light">{{ page.video_h2 }}</h2>
+		</div>
+	</div>
+
+	<div class="container padding-wrap-sm">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<div>
+					<div class="embed-responsive embed-responsive-16by9">
+						<video class="embed-responsive-item" src="{{ page.video_link }}" preload="none" controls poster="{{ site.baseurl }}/assets/images/{{ page.video_poster }}">
+							<source src="{{ page.video_link }}" type="video/mp4">
+						</video>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--### Video Block End-->

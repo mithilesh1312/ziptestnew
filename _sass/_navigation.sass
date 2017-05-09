@@ -1,0 +1,135 @@
+.navbar-header
+	padding: 0 0 5px 0
+
+.logo
+	float: left
+	background: 
+		image: url("../assets/images/logo.png") 
+		repeat: no-repeat 
+		position: top left
+		size: contain
+	
+	@include phone
+		width: 180px
+		height: 32px
+
+	@include phone-ls
+		width: 200px
+		height: 37px
+	
+	@include tablet
+		width: 150px
+		height: 28px
+	
+	@include tablet-ls
+		width: 200px
+		height: 32px
+	
+.navbar
+	min-height: 88px
+	margin-bottom: 0
+	border-radius: 0
+	border: 0
+	background:
+		color: $base-color-bg	
+	
+	.btn.text-uppercase
+		@include phone
+			width: 97%
+		@include tablet
+			width: auto
+	
+.navbar-default
+	.navbar-nav
+		.btn-signup,
+		.btn-login
+			color: #fff
+			margin-left: 5px
+			margin-right: 5px
+			border-radius: 5px
+			padding-left: 10px
+			padding-right: 10px
+	
+			@include phone
+				margin-top: 10px
+				margin-bottom: 5px
+	
+			@include tablet
+				margin-top: 0
+				margin-bottom: 0
+	
+			&:hover
+				color: #fff
+		
+		.btn-signup
+			background:
+				color: $firm-color
+			border:
+				color: $firm-color-border
+			&:hover
+				background:
+					color: $firm-color-hov
+				border:
+					color: $firm-color-border-hov
+		
+		.btn-login
+			background:
+				color: $base-color
+			border:
+				color: $base-color-border
+			&:hover
+				background:
+					color: $base-color-hov
+				border:
+					color: $base-color-border-hov
+		
+		>li
+			
+			>a
+				padding-top: 10px
+				padding-bottom: 10px
+	
+.navbar-brand
+	@include phone
+		margin-top: 10px
+	
+	@include tablet
+		margin-top: 5px
+	
+.logo-subheading
+	line-height: 100%
+
+	@include phone
+		font-size: 16px
+
+	@include tablet
+		font-size: 14px
+	
+	@include tablet-ls
+		font-size: 16px
+
+.top-nav
+	float: right
+	margin-top: 5px
+	
+	@include phone
+		display: none
+	@include tablet
+		display: block
+
+.navbar-default 
+	.navbar-collapse
+		border: none
+	
+.navbar-toggle
+	margin-top: 25px
+	background:
+		color: $base-color-bg
+
+	
+.nav-wrap
+	max-width: 1200px
+	width: 100%
+	margin: 0 auto
+	padding: 0 10px
+	font-family: $mont-reg

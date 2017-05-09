@@ -1,0 +1,48 @@
+.thumbnail
+	border: none
+
+	@include phone
+		margin-bottom: 20px
+	
+	@include tablet-ls
+		margin-bottom: 0
+
+	img.center-block
+		margin-top: 5px
+
+	em
+		font-size: 16px
+
+	h4
+		color: $firm-color
+	
+	&.case
+		height: 380px
+		margin-top: 30px
+		background:
+			color: #f6f6f6
+	
+		>a
+			width: 150px
+			height: 150px
+			display: block
+			background:
+				position: center
+				size: 100%
+				repeat: no-repeat
+				color: #f6f6f6
+		
+		h4
+			fomt-size: 16px
+		
+		p
+			font-family: $roboto-reg
+	
+			@include phone
+				padding: 0 40px 10px
+		
+			@include tablet-ls
+				padding: 0 35px 10px
+		
+			@include desktop
+				padding: 0 40px 10px

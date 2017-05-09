@@ -1,0 +1,109 @@
+---
+layout: default
+permalink: contact-us
+
+title: Easy Restaurant Scheduling Software. Try it Free. | Zip Schedules
+
+description: Scheduling software made for restaurants. Control your labor costs, communicate with staff and keep everyone in-the-loop with a free mobile apps.
+
+### Hero background image and headline text at the top of the page
+hero_img_bg: /assets/images/contact_cut.jpg
+hero_headline: Contact Us
+
+### Form Block Data
+### Create as many options for select field as you need
+select-title:
+  - Title Code
+  - C-Level
+  - Vice President
+  - Director
+  - Owner Operator
+  - Manager
+  - Staff
+  - Other
+
+select-dept:
+  - Department Code
+  - Executive
+  - Finance
+  - Operations
+  - HR
+  - IT
+  - Marketing
+  - Sales
+  - Training
+  - Supply Chain
+  - Other
+
+form_btn: Submit
+
+---
+<!--### Hero Block Start-->
+<div class="hero" style="background-image: url({{ site.baseurl }}{{ page.hero_img_bg }})">
+	<div class="padding-wrap-xl-both tint text-center">
+		<div class="container">
+			<h1>{{ page.hero_headline }}</h1>
+		</div>
+	</div>
+</div>
+<!--### Hero Block End-->
+
+<!--### Form Block Start-->
+<div class="container padding-wrap-lg">
+	<form class="form-horizontal" method="post">
+
+		<div class="form-group">
+			<div class="col-sm-offset-1 col-sm-3">
+				<input type="text" class="form-control" id="" placeholder="First Name" name="signup_first_name" tabindex="" required>
+			</div>
+			<div class="col-sm-3">
+				<input type="text" class="form-control" id="" placeholder="Last Name" name="signup_last_name" tabindex="" required>
+			</div>
+			<div class="col-sm-3">
+				<input type="email" class="form-control" id="" placeholder="Email address" name="signup_email" tabindex="" required>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-sm-offset-1 col-sm-3">
+				<input type="text" class="form-control" tabindex="" id="" placeholder="Company" name="signup_company">
+			</div>
+			<div class="col-sm-3">
+				<select name="title-code" tabindex="" class="form-control">
+					{% for item in page.select-title %}
+					<option value="{{ item }}">{{ item }}</option>
+					{% endfor %}
+				</select>
+			</div>
+			<div class="col-sm-3">
+				<select name="department-code" tabindex="" class="form-control" id="dlist">
+					{% for item in page.select-dept %}
+					<option value="{{ item }}">{{ item }}</option>
+					{% endfor %}
+				</select>
+			</div>
+
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-1 col-sm-3">
+				<input type="text" class="form-control" name="units" id="units" placeholder="Number of Locations" tabindex="7">
+			</div>
+
+			<div class="col-sm-3">
+				<input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone Number" tabindex="8" required>
+			</div>
+
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-1 col-sm-9">
+				<textarea rows="5" tabindex="9" class="form-control" name="description" id="description" placeholder="Message"></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-1 col-sm-3">
+				<button type="submit" class="btn btn-info btn-lg" name="submit">{{ page.form_btn }}</button>
+			</div>
+		</div>
+	</form>
+</div>
+<!--### Form Block End-->

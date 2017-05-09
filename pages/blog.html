@@ -1,0 +1,103 @@
+---
+layout: default
+permalink: shift-planning-scheduling-blog
+
+paginate: true
+
+title: Restaurant Employee Scheduling Software | Zip Schedules
+description: Scheduling software made for restaurants. Control your labor costs, communicate with staff and keep everyone in-the-loop with a free mobile apps.
+
+image:
+author: zip schedules
+
+### Hero background image and headline text at the top of the page
+#----- Hero_4 -----#
+hero_4_img_bg: chef_cut.jpeg
+hero_4_headline: Employee Scheduling Blog
+hero_4_subheadline: 
+
+---
+
+<div class="hero" style="background-image: url({{ site.baseurl }}/assets/images/{{ page.hero_4_img_bg }})">
+	<div class="padding-wrap-lg-both tint text-center">
+		<div class="container">
+			<h1>{{ page.hero_4_headline }}</h1>
+		</div>
+	</div>
+</div>
+<!--### Hero Block End-->
+
+<!--Subheader headlines Start-->
+<div class="container-fluid">
+	<div class="padding-wrap-sm text-center">
+		<div class="container">
+			<h2 class="text-light">{{ page.hero_4_subheadline }}</h2>
+		</div>
+	</div>
+</div>
+<!--Subheader headlines End-->
+
+<!--Blog Listing Start-->
+<div class="padding-wrap-md">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9">
+				<section class="blog-listing">
+					{% for post in paginator.posts %}
+					<div class="thumbnail">
+						{% if post.image %}
+						<img src="{{ site.baseurl }}/assets/images/{{ post.image }}" alt="{{ post.title }}"> {% endif %}
+						<div class="caption">
+							<p class="info text-uppercase">
+								{{ post.date | date: '%B %d, %Y' }} / By <span>
+								{% if page.author %}
+									{{ page.author }}
+								{% elsif site.author %}
+									{{ site.author }}
+								{% endif %}</span> / In <span>{{ site.title }}</span> / <span>Comments</span>
+							</p>
+							<h3 class="text-uppercase text-bold"><a href="{{ site.baseurl }}{{ post.url }}" class="">{{ post.title }}</a></h3>
+							<p class="text-light quote">
+								{{ post.excerpt | remove: '
+								<p>' | remove: '</p>' }}
+							</p>
+							<p class="padding-wrap-sm">
+								<a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-primary text-uppercase" role="button">Read more</a>
+							</p>
+						</div>
+					</div>
+					<hr> {% endfor %}
+				</section>
+				<section class="text-center">
+
+					<!-- Pagination links -->
+					<div class="pagination">
+						{% if paginator.previous_page %}
+						<a href="{{ paginator.previous_page_path }}" class="previous"><i class="fa fa-arrow-left" aria-hidden="true"></i>Previous</a> {% else %}
+						<span class="previous"><i class="fa fa-arrow-left" aria-hidden="true"></i>Previous</span> {% endif %}
+						<span class="page_number ">Page: <span class="badge">{{ paginator.page }}</span> of {{ paginator.total_pages }}</span>
+						{% if paginator.next_page %}
+						<a href="{{ paginator.next_page_path }}" class="next">Next<i class="fa fa-arrow-right" aria-hidden="true"></i></a> {% else %}
+						<span class="next ">Next<i class="fa fa-arrow-right" aria-hidden="true"></i></span> {% endif %}
+					</div>
+
+				</section>
+			</div>
+			<!--Side bar Start-->
+			<div class="col-md-2 col-md-offset-1">
+				<section class="blog-shortcut">
+					<h3 class="text-reg">Recent posts</h3>
+					{% for post in site.posts limit: 5 %}
+						<ul class="list-unstyled">
+						<li>
+						<a href="{{ post.url}}">{{ post.title }}</a>
+						</li>
+						</ul>
+					{% endfor %}
+				</section>
+			</div>
+			<!--Side bar End-->
+		</div>
+	</div>
+</div>
+<!--Blog Listing End-->

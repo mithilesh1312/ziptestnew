@@ -1,0 +1,27 @@
+<footer class="container-fluid padding-wrap-lg">
+	<div class="container">
+		{% for entry in site.data.navigation.footer %}
+		<div class="col-lg-3">
+			<h4>{{ entry.title }}</h4>
+			<ul class="list-unstyled">
+				{% for subcategory in entry.subcategories %}
+				{% if subcategory.external == null %}
+				<li><a href="{{ site.baseurl }}/{{ subcategory.link }}">{{ subcategory.name }}</a></li>
+				{% else %}
+				<li><a href="{{ subcategory.link }}" target="_blank">{{ subcategory.name }}</a></li>
+				{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
+		{% endfor %}
+	</div>
+		<div class="container">
+			<div class="col-lg-12">
+				<div class="copyright padding-wrap-sm text-center">
+					&copy; {{ site.title }} &middot; {{ site.description }} &middot; {{ site.mailing_address }} &middot;
+					<a href="{{ site.baseurl }}/{{ site.data.navigation.nav_termsofuse_url }}"><span>Terms of Use</span></a> &middot;
+					<a href="{{ site.baseurl }}/{{ site.data.navigation.nav_privacypolicy_url }}"><span>Privacy Policy</span></a>
+				</div>
+			</div>
+		</div>
+</footer>

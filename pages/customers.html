@@ -1,0 +1,99 @@
+---
+layout: default
+permalink: customers
+
+title: Easy Restaurant Scheduling Software. Try it Free. | Zip Schedules
+description: Scheduling software made for restaurants. Control your labor costs, communicate with staff and keep everyone in-the-loop with a free mobile apps.
+
+#----- Hero_4 -----#
+hero_4_img_bg: chef_cut.jpeg
+hero_4_headline: Customers
+hero_4_subheadline: Here are just a few restaurants that are making their lives easier.
+
+# Testimonial Details are stored in the _data/testimonials.yml file
+testimonial_headline: But wait, there's more...
+
+# Case Studies Details are stored in the _data/testimonials.yml file
+case_headline: Not to mention a few case studies...
+
+# Turn Other Includes On/Off
+testimonials-1_show: true
+webinar_show: true
+appmarket_show: false
+---
+
+{% include hero_4.html %}
+
+{% include video_2.html %}
+
+
+<!--### Testimonials Block Start-->
+<div class="padding-wrap-sm">
+	<div class="container">
+		<div class="row text-center padding-wrap-xs">
+			<h3 class="text-reg">{{ page.testimonial_headline }} <span class="arrow-down"></span></h3>
+		</div>
+		<div class="row padding-wrap-sm">
+			{% for item in site.data.testimonials.testimonials limit: 4 offset:2 %}
+
+			<div class="col-md-6">
+				<div class="media padding-wrap-sm">
+					<div class="media-left">
+						<a href="#">
+							<img src='{{ site.baseurl }}/assets/images/{{item.person_photo}}' height="150px" width="150px" class="img-circle">
+						</a>
+					</div>
+					<div class="media-body">
+						<div class="clearfix panel">
+							<div class="pull-left caption">
+								<h4 class="text-reg">{{ item.person_name }}</h4>
+								<h5 class="text-reg">{{ item.biz_name }}
+									<br>
+								{{ item.biz_location }}
+								</h5>
+							</div>
+							<div class="pull-right">
+								<img src='{{ site.baseurl }}/assets/images/{{item.biz_logo}}' height="55px" class="center-block">
+							</div>
+						</div>
+						<div class="quote">
+							<p class="text-reg">"{{ item.person_quote }}"</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+<!--### Case Studies Block Start-->
+<div class="padding-wrap-sm">
+	<div class="container">
+		<div class="row text-center padding-wrap-xs">
+			<h3 class="text-reg">{{ page.case_headline }} <span class="arrow-down"></span></h3>
+		</div>
+	</div>
+	<div class="container">
+	<div class="row padding-wrap-lg">
+			{% for item in site.data.testimonials.testimonials limit: 6 offset:6 %}
+	
+			<div class="col-md-4 col-sm-6">
+				<div class="thumbnail case text-center">
+					<a class=" center-block" href="{{ item.biz_link }}" target="_blank" style="background-image: url({{ site.baseurl }}/assets/images/{{ item.biz_logo }})">
+					</a>
+					<h4 class="text-light text-uppercase">{{ item.biz_name }}</h4>
+					<h5 class="text-reg">{{ item.biz_location }}</h5>
+					<p class="text-reg">{{ item.person_quote | truncatewords: 35 }}</p>
+					<div class="text-center">
+						<a href="{{ site.baseurl }}/assets/pdf/{{ item.cstudy_link }}" target="_blank" title="{{ item.biz_name }}" class="btn btn-warning btn-sm" align="center">Read Case Study</a>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+

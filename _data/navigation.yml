@@ -1,0 +1,188 @@
+#--- Navigation Miscellaneous Settings ---#
+
+nav_news_url: news.html
+nav_blog_url: shift-planning-scheduling-blog.html
+nav_termsofuse_url: terms-of-use.html
+nav_privacypolicy_url: privacy-policy.html
+
+#--- Navigation Top ---#
+nav_top:
+  - text: Questions? 1-800-513-1564                                                         # Text to display in top navigation
+    image:
+    url: contact-us.html                                                                    # URL destination
+    show: true                                                                              # true = show navigation item; false = hide
+  - text: Blog
+    image:
+    url: shift-planning-scheduling-blog.html
+    show: true
+  - text: News
+    image:
+    url: news.html
+    show: true
+  - text: Resources
+    image:
+    url: restaurant-scheduling-resources.html
+    show: true
+  - text: Webinar
+    image:
+    url: restaurant-scheduling-webinar.html
+    show: true
+  - text: Region
+    image: US.png
+    url: choose-your-region.html
+    show: true
+
+#--- Navigation Main ---#
+# To make a button, Set class = button-login (black button) or class = button-signup (orange button)
+# To make a dropdown menu - use the following structure. Set class = dropdown
+#menu:
+#  - name: Back Office
+#    link: "#"
+#    class: dropdown
+#    sub-items:
+#      - name: Sub Item
+#        link: "#"
+#      - name: Sub Item
+#        link: "#"
+#      - name: Sub Item
+#        link: "#"
+#      - name: Sub Item
+#        link: "#"
+
+nav_main:
+  - name: Scheduling Software   
+    link: restaurant-employee-scheduling-software.html
+    class: #dropdown  - set class = dropdown if you want this menu item to be drop down menu.
+    sub-items:
+      - name: First Item
+        link: "zipschedules.com"
+      - name: Sub Item
+        link: "#"
+      - name: Sub Item
+        link: "#"
+      - name: Sub Item
+        link: "#"
+  - name: Mobile
+    link: restaurant-mobile-scheduling-apps.html
+    class: dropdown
+    sub-items:
+      - name: Sub Item
+        link: "#"
+      - name: Sub Item
+        link: "#"
+      - name: Sub Item
+        link: "#"
+      - name: Sub Item
+        link: "#"
+  - name: Customers 
+    link: customers.html
+    class:
+    sub-items:
+      - name: Sub Item
+        link: "#"
+      - name: Sub Item
+        link: "#"
+      - name: Sub Item
+        link: "#"
+      - name: Sub Item
+        link: "#"
+  - name: Pricing
+    link: pricing.html
+    class:
+  - name: Signup
+    link: signup.html
+    class: button-signup
+  - name: Login
+    link: https://app.hubworks.com/hwsso/#/login/
+    class: button-login
+
+#--- Navigation Footer ---#
+# Set external = true if you want to open the link in a new browser tab. 
+footer:
+  - title: Resources
+    subcategories:
+      - name: App Features
+        link: restaurant-employee-scheduling-software.html
+      - name: Mobile Features
+        link: restaurant-mobile-scheduling-apps.html
+      - name: Integrations
+        link: employee-scheduling-integrations.html
+      - name: Blog
+        link: shift-planning-scheduling-blog.html
+      - name: Employee Scheduling Articles
+        link: news.html
+      - name: Resource Center
+        link: restaurant-scheduling-resources.html
+      - name: ROI Calculator
+        link: restaurant-labor-cost-savings-calculator.html
+      - name: Excel Schedule Template Download
+        link: https://go.hubworks.com/free-employee-scheduling-template.html
+        external: true
+  - title: Industries
+    subcategories:
+      - name: Customer Service
+        link: customer-service-employee-scheduling-software.html
+      - name: Healthcare
+        link: healthcare-employee-scheduling-software.html
+      - name: Hospitals
+        link: hospital-employee-scheduling-software.html
+      - name: Hotels
+        link: hotel-employee-scheduling-software.html
+      - name: Restaurants
+        link: restaurant-employee-scheduling-software.html
+      - name: Retail
+        link: retail-store-employee-scheduling-software.html
+      - name: Theaters
+        link: theater-employee-scheduling-software.html
+      - name: Theme Parks
+        link: themepark-employee-scheduling-software.html
+      - name: Law Enforcement
+        link: law-enforcement-employee-scheduling-software.html
+      - name: Hospitality
+        link: hospitality-employee-scheduling-software.html
+      - name: Non Profits
+        link: non-profits-employee-scheduling-software.html
+      - name: Volunteering
+        link: volunteering-employee-scheduling-software.html
+  - title: Top Articles
+    subcategories:
+      - name: Top 10 Employee Scheduling Benefits (example)
+        link: top-10-employee-scheduling-benefits.html
+      - name: SEO Landing Page 2
+        link: Link2.html
+      - name: SEO Landing Page 3
+        link: Link3.html
+      - name: SEO Landing Page 4
+        link: Link4.html
+      - name: SEO Landing Page 5
+        link: Link5.html
+      - name: SEO Landing Page 6
+        link: Link6.html
+      - name: SEO Landing Page 7
+        link: Link7.html
+      - name: SEO Landing Page 8
+        link: Link8.html
+      - name: SEO Landing Page 9
+        link: Link9.html
+      - name: SEO Landing Page 10
+        link: Link10.html
+  - title: Mobile Apps
+    subcategories:
+      - name: Apple iPhone App
+        link: https://itunes.apple.com/us/app/zip-schedules/id885618791?mt=8
+        external: true
+      - name: Google Android App
+        link: https://play.google.com/store/apps/details?id=com.altametrics.rib.zipschedules.activities&hl=en
+        external: true
+  - title: More 
+    subcategories:
+      - name: Contact Us
+        link: contact-us.html
+      - name: Partners
+        link: http://hubworks.com/partners/
+        external: true
+      - name: Developers / API
+        link: http://api.hubworks.com/
+        external: true
+      - name: All Includes
+        link: all_includes.html

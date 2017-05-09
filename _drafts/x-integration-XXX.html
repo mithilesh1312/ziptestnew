@@ -1,0 +1,127 @@
+---
+layout: default
+permalink: peoplesoft-employee-schedule-integration-zip schedules
+
+title: Restaurant Employee Scheduling Software | Zip Schedules
+description: Scheduling software made for restaurants. Control your labor costs, communicate with staff and keep everyone in-the-loop with a free mobile apps.
+
+# Hero background image and headline text at the top of the page
+hero_img_bg: resto_cut.jpg
+hero_headline: Peoplesoft + Zip Schedules Schedule Integration
+hero_subheadline: Seemlessly share employee schedule data with Peoplesoft.
+
+# Feature Spotlight
+features:
+  - feature_headline: Save time creating schedules
+    feature_image: schedules-2x.png
+    feature_image_position: right
+    subheadline1: Save time creating schedules
+    subheadline1_description: You'll recognize our schedule layout whether you've used Excel or pen and paper. We've taken it a step further with our intuitive drag and drop schedule and auto-scheduling feature.
+    subheadline2: Build schedules in one click
+    subheadline2_description: Using auto-scheduling and custom shift templates, our system builds a schedule based on staff availability and weekly shift requirements.
+  - feature_headline: Keep everybody in the loop
+    feature_image: notifications-2x.png
+    feature_image_position: left
+    subheadline1: Instant notifications
+    subheadline1_description: Your staff are immediately notified of their shifts when the schedule is published or when changes are made to their shifts.
+    subheadline2: Approve or decline staff requests on the fly
+    subheadline2_description: Using our free <a href="#">mobile apps</a>, get notified to approve or decline requests for time off, availability and shift trades.
+  - feature_headline: Take control of your labor costs
+    feature_image: labor-2x.png
+    feature_image_position: right
+    subheadline1: Set and view labor costs by department
+    subheadline1_description: Our budgeting tool allows you to see how much you're spending on your staff on a daily and weekly basis in real time. Instantly determine how much money this can save your business with our <a href="#">labor cost savings calculator</a>.
+    subheadline2: Instant alerts around overtime
+    subheadline2_description: Get notified if you are about to schedule an employee into overtime.
+
+# More Features
+# To change the Icon just Choose proper ICON on FontAwesome website and change img value that will add a class for example "fa-user", "fa-cultery"
+
+more_features_headline: And if that's not enough...
+more_features:
+  - title: Free support
+    description: Our support team is only a phone call away. We want you to be successful in seeing the value in scheduling software, so we help you whenever you need it.
+    icon: fa-user
+  - title: POS integrations
+    description: We integrate seamlessly with some of the top restaurant POS systems in the industry. 7shifts brings in historical sales data and predicts your upcoming sales to help you schedule more accurately.
+    icon: fa-credit-card
+  - title: Designed for restaurants
+    description: Rather than building software that works 'ok' for all industries, we decided to make 7shifts work perfectly for restaurants. Every feature we build has been designed with restaurant owners, managers, and employees in mind.
+    icon: fa-cutlery
+  - title: Unlimited text notifications
+    description: Your staff are immediately notified of their shifts when the schedule is published and when changes are made to their shifts. We don't charge you extra SMS fees if you send more messages.
+    icon: fa-comments
+  - title: Multi-location support
+    description: Does your restaurant have more than one location? No problem. You can easily manage staff across locations to prevent double booking and overtime hours.
+    icon: fa-globe
+  - title: Built-in manager log book
+    description: Allow managers to write logs for each day after their shift ends. They can also attach files to their notes, categorize them and have them emailed.<a href="#"> Learn more</a>.
+    ocon: fa-calendar
+
+# Other Includes
+testimonials-1_show: true
+webinar_show: true
+appmarket_show: false
+
+---
+
+{% include hero.html %}
+
+<!-- Features -->
+<div id="advantages" class="">
+	<div class="container">
+	{% for item in page.features %}
+		{% if item.feature_image_position == 'right' %}
+		<div class="padding-wrap-md">
+			<div class="row">
+				<div class="col-md-5">
+					<h3 class="padding-wrap-sm">{{ item.feature_headline }}</h3>
+					<h4>{{ item.feature_subheadline1 }}</h4>
+					<p>{{ item.subheadline1_description }}</p>
+					<h4>{{ item.subheadline2 }}</h4>
+					<p>{{ item.subheadline2_description }}</p>
+				</div>
+				<div class="col-md-6 col-md-offset-1 sw-wrap-lg">
+					<div class="padding-wrap-md sw-img-bg uno" style="background-image: url({{ site.baseurl }}/assets/images/{{ item.feature_image }})">
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endif %}
+		{% if item.feature_image_position == 'left' %}
+		<div class="padding-wrap-md">
+			<div class="row">
+				<div class="col-md-6 sw-wrap-sm">
+					<div class="padding-wrap-md sw-img-bg dos" style="background-image: url({{ site.baseurl }}/assets/images/{{ item.feature_image }})">
+					</div>
+				</div>
+				<div class="col-md-5 col-md-offset-1">
+					<h3 class="padding-wrap-sm">{{ item.feature_headline }}</h3>
+					<h4>{{ item.feature_subheadline1 }}</h4>
+					<p>{{ item.subheadline1_description }}</p>
+					<h4>{{ item.subheadline2 }}</h4>
+					<p>{{ item.subheadline2_description }}</p>
+				</div>
+			</div>
+		</div>
+		{% endif %}
+	{% endfor %}
+	</div>
+</div>
+
+<!-- More Features -->
+<div id="other-features">
+	<div class="padding-wrap-lg">
+		<div class="container text-center padding-wrap-sm">
+			<h4 class="text-reg">{{ page.more_features_headline }}</h4>
+		</div>
+		<div class="container">
+			{% for item in page.more_features %}
+			<div class="col-md-4 col-sm-6">
+				<h5><i class="fa {{ item.icon }}" aria-hidden="true"></i>{{ item.title }}</h5>
+				<p class="text-reg">{{ item.description }}</p>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<!--<html>-->
+<!--<![endif]-->
+<!--[if IE]> <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+
+<html dir="ltr" lang="en-US">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="restaurant scheduling software, online scheduling, restaurant scheduling, food and beverage scheduling software, juice bar scheduling, work schedules, online restaurant work schedules, scheduling software, online food scheduling, staff scheduling software, employee restaurant software" />
+    <meta name="robots" content="index,follow" />
+    <meta name="product" content="Restaurant Employee Scheduling Software and Scheduling Program" />
+    <meta name="abstract" content="Quick, stress-free, easy to use and organized Restaurant Scheduling Software" />
+	<meta name="category" content="Restaurant Employee Scheduling, Restaurant Management Software, Restaurant Scheduling Software" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-itunes-app" content="app-id=731444612" />
+    
+    <meta property='og:locale' content='en_US'/>
+	<meta property='og:type' content='article'/>
+
+<!-- # redirects visitors from the 404 page to the home page after 5 seconds -->
+    {% if page.url == "/404.html" %}
+    <meta http-equiv="refresh" content="5; url=https://hubworks.com/">
+    {% endif %}
+
+
+    <link rel="shortcut icon" href="{{ site.baseurl }}/assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/main.css" />
+
+{% seo %}
+
+</head>
+
+<body class="home">
+
+{% include navigation.html %}
+
+{{ content }}
+
+{% if site.cta_bg_show %}
+{% include calltoaction_1.html %}
+{% endif %}
+
+{% if site.cta_video_show %}
+{% include calltoaction_2.html %}
+{% endif %}
+
+{% if page.testimonials-1_show %}
+{% include testimonials_1.html %}
+{% endif %}
+
+{% if page.webinar_show %}
+{% include webinar.html %}
+{% endif %}
+
+{% include footer.html %}
+
+{% include scripts.html %}
+
+</body>
+
+</html>
