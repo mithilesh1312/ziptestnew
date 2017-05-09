@@ -36,7 +36,7 @@ minify_html: false                                          # Set to "true" to m
 #------------------------------#
 #   Global Site Settings       #
 #------------------------------#
-baseurl: ""                                                          # the subpath of your site, e.g. /blog/
+baseurl: "/ziptestnew"                                                          # the subpath of your site, e.g. /blog/
 url: ""                                                                                     # the base hostname & protocol for your site
 
 logo: logo.png                                                                              # URL to a site-wide logo (e.g., /img/key-phrase-logo.png)
